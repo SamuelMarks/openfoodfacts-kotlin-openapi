@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackagingPackagingsInner
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackagingPackagingsInner
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -30,22 +30,22 @@ import com.squareup.moshi.JsonClass
  * @param warning 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackaging (
 
-    @Json(name = "non_recyclable_and_non_biodegradable_materials")
+    @SerialName("non_recyclable_and_non_biodegradable_materials")
     val nonRecyclableAndNonBiodegradableMaterials: kotlin.Int? = null,
 
-    @Json(name = "packagings")
+    @SerialName("packagings")
     val packagings: kotlin.collections.List<GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackagingPackagingsInner>? = null,
 
-    @Json(name = "score")
+    @SerialName("score")
     val score: kotlin.Int? = null,
 
-    @Json(name = "value")
+    @SerialName("value")
     val `value`: kotlin.Int? = null,
 
-    @Json(name = "warning")
+    @SerialName("warning")
     val warning: kotlin.String? = null
 
 ) {

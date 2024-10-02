@@ -15,13 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredients
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackaging
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsProductionSystem
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsThreatenedSpecies
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredients
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -32,19 +29,19 @@ import com.squareup.moshi.JsonClass
  * @param threatenedSpecies 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustments (
 
-    @Json(name = "origins_of_ingredients")
+    @SerialName("origins_of_ingredients")
     val originsOfIngredients: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredients? = null,
 
-    @Json(name = "packaging")
+    @SerialName("packaging")
     val packaging: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackaging? = null,
 
-    @Json(name = "production_system")
+    @SerialName("production_system")
     val productionSystem: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsProductionSystem? = null,
 
-    @Json(name = "threatened_species")
+    @SerialName("threatened_species")
     val threatenedSpecies: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsThreatenedSpecies? = null
 
 ) {

@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Field that triggered the warning or error.
@@ -26,15 +26,15 @@ import com.squareup.moshi.JsonClass
  * @param `value` Value of the field that triggered the warning or error.
  */
 
-
+@Serializable
 data class WarningOrErrorMessageField (
 
     /* Name of the field that triggered the warning or error. */
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
     /* Value of the field that triggered the warning or error. */
-    @Json(name = "value")
+    @SerialName("value")
     val `value`: kotlin.String? = null
 
 ) {

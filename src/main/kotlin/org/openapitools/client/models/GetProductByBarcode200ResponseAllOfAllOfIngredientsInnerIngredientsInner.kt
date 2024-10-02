@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -33,35 +33,35 @@ import com.squareup.moshi.JsonClass
  * @param vegetarian 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfIngredientsInnerIngredientsInner (
 
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
     /* Sub ingredients composing this ingredients.  */
-    @Json(name = "ingredients")
+    @SerialName("ingredients")
     val ingredients: kotlin.Any? = null,
 
-    @Json(name = "percent")
+    @SerialName("percent")
     val percent: kotlin.Int? = null,
 
-    @Json(name = "percent_estimate")
-    val percentEstimate: java.math.BigDecimal? = null,
+    @SerialName("percent_estimate")
+    val percentEstimate: Double? = null,
 
-    @Json(name = "percent_max")
-    val percentMax: java.math.BigDecimal? = null,
+    @SerialName("percent_max")
+    val percentMax: Double? = null,
 
-    @Json(name = "percent_min")
+    @SerialName("percent_min")
     val percentMin: kotlin.Int? = null,
 
-    @Json(name = "text")
+    @SerialName("text")
     val text: kotlin.String? = null,
 
-    @Json(name = "vegan")
+    @SerialName("vegan")
     val vegan: kotlin.String? = null,
 
-    @Json(name = "vegetarian")
+    @SerialName("vegetarian")
     val vegetarian: kotlin.String? = null
 
 ) {

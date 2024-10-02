@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -28,19 +28,19 @@ import com.squareup.moshi.JsonClass
  * @param shape 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackagingPackagingsInner (
 
-    @Json(name = "ecoscore_material_score")
+    @SerialName("ecoscore_material_score")
     val ecoscoreMaterialScore: kotlin.Int? = null,
 
-    @Json(name = "ecoscore_shape_ratio")
+    @SerialName("ecoscore_shape_ratio")
     val ecoscoreShapeRatio: kotlin.Int? = null,
 
-    @Json(name = "material")
+    @SerialName("material")
     val material: kotlin.String? = null,
 
-    @Json(name = "shape")
+    @SerialName("shape")
     val shape: kotlin.String? = null
 
 ) {

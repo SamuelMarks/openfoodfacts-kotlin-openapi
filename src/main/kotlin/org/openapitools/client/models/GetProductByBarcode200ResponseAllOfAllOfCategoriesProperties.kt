@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -27,16 +27,16 @@ import com.squareup.moshi.JsonClass
  * @param ciqualFoodCodeColonEn 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfCategoriesProperties (
 
-    @Json(name = "agribalyse_food_code:en")
+    @SerialName("agribalyse_food_code:en")
     val agribalyseFoodCodeColonEn: kotlin.String? = null,
 
-    @Json(name = "agribalyse_proxy_food_code:en")
+    @SerialName("agribalyse_proxy_food_code:en")
     val agribalyseProxyFoodCodeColonEn: kotlin.String? = null,
 
-    @Json(name = "ciqual_food_code:en")
+    @SerialName("ciqual_food_code:en")
     val ciqualFoodCodeColonEn: kotlin.String? = null
 
 ) {

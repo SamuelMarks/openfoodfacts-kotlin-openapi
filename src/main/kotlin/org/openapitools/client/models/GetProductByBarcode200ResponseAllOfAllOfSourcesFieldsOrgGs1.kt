@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -32,31 +32,31 @@ import com.squareup.moshi.JsonClass
  * @param publicationDateTime 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfSourcesFieldsOrgGs1 (
 
-    @Json(name = "gln")
+    @SerialName("gln")
     val gln: kotlin.String? = null,
 
-    @Json(name = "gpcCategoryCode")
+    @SerialName("gpcCategoryCode")
     val gpcCategoryCode: kotlin.String? = null,
 
-    @Json(name = "gpcCategoryName")
+    @SerialName("gpcCategoryName")
     val gpcCategoryName: kotlin.String? = null,
 
-    @Json(name = "isAllergenRelevantDataProvided")
+    @SerialName("isAllergenRelevantDataProvided")
     val isAllergenRelevantDataProvided: kotlin.String? = null,
 
-    @Json(name = "lastChangeDateTime")
+    @SerialName("lastChangeDateTime")
     val lastChangeDateTime: kotlin.String? = null,
 
-    @Json(name = "partyName")
+    @SerialName("partyName")
     val partyName: kotlin.String? = null,
 
-    @Json(name = "productionVariantDescription")
+    @SerialName("productionVariantDescription")
     val productionVariantDescription: kotlin.String? = null,
 
-    @Json(name = "publicationDateTime")
+    @SerialName("publicationDateTime")
     val publicationDateTime: kotlin.String? = null
 
 ) {

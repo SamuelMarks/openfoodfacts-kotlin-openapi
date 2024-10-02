@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -30,25 +30,25 @@ import com.squareup.moshi.JsonClass
  * @param shownByDefault 
  */
 
-
+@Serializable
 data class TableElementColumnsInner (
 
-    @Json(name = "type")
+    @SerialName("type")
     val type: kotlin.String? = null,
 
-    @Json(name = "text")
+    @SerialName("text")
     val text: kotlin.String? = null,
 
-    @Json(name = "text_for_small_screens")
+    @SerialName("text_for_small_screens")
     val textForSmallScreens: kotlin.String? = null,
 
-    @Json(name = "style")
+    @SerialName("style")
     val style: kotlin.String? = null,
 
-    @Json(name = "column_group_id")
+    @SerialName("column_group_id")
     val columnGroupId: kotlin.String? = null,
 
-    @Json(name = "shown_by_default")
+    @SerialName("shown_by_default")
     val shownByDefault: kotlin.Boolean? = null
 
 ) {

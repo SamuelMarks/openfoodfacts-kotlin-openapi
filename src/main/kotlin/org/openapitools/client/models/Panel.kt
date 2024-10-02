@@ -15,11 +15,11 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.Element
-import org.openapitools.client.models.TitleElement
+import dev.upvote.api.models.Element
+import dev.upvote.api.models.TitleElement
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Each panel contains an optional title and an optional array of elements.
@@ -35,41 +35,41 @@ import com.squareup.moshi.JsonClass
  * @param topics 
  */
 
-
+@Serializable
 data class Panel (
 
     /* Type of the panel. If set to \"card\", the panel and its sub-panels should be displayed in a card. If set to \"inline\", the panel should have its content always displayed. */
-    @Json(name = "type")
+    @SerialName("type")
     val type: kotlin.String? = null,
 
     /* If true, the panel is to be displayed already expanded. If false, only the title should be displayed, and the user should be able to click or tap it to open the panel and display the elements. */
-    @Json(name = "expanded")
+    @SerialName("expanded")
     val expanded: kotlin.Boolean? = null,
 
     /* If set to \"large\", the content of the panel should be expanded on large screens, but it should still be possible to unexpand it. */
-    @Json(name = "expand_for")
+    @SerialName("expand_for")
     val expandFor: kotlin.String? = null,
 
     /* A simple assessment of the panel value, typically used to format fonts, et.c e.g. bad = red */
-    @Json(name = "evaluation")
+    @SerialName("evaluation")
     val evaluation: Panel.Evaluation? = null,
 
-    @Json(name = "title_element")
+    @SerialName("title_element")
     val titleElement: TitleElement? = null,
 
     /* An ordered list of elements to display in the content of the panel. */
-    @Json(name = "elements")
+    @SerialName("elements")
     val elements: kotlin.collections.List<Element>? = null,
 
     /* a message level, as levels we use in log. It might help theming the panel visualy  */
-    @Json(name = "level")
+    @SerialName("level")
     val level: kotlin.String? = null,
 
     /* size is either empty (normal display)  or small to indicate a panel that should have a smaller font size  */
-    @Json(name = "size")
+    @SerialName("size")
     val propertySize: Panel.PropertySize? = null,
 
-    @Json(name = "topics")
+    @SerialName("topics")
     val topics: kotlin.collections.List<kotlin.String>? = null
 
 ) {
@@ -79,22 +79,22 @@ data class Panel (
      *
      * Values: good,average,neutral,bad,unknown
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Evaluation(val value: kotlin.String) {
-        @Json(name = "good") good("good"),
-        @Json(name = "average") average("average"),
-        @Json(name = "neutral") neutral("neutral"),
-        @Json(name = "bad") bad("bad"),
-        @Json(name = "unknown") unknown("unknown");
+        @SerialName("good") good("good"),
+        @SerialName("average") average("average"),
+        @SerialName("neutral") neutral("neutral"),
+        @SerialName("bad") bad("bad"),
+        @SerialName("unknown") unknown("unknown");
     }
     /**
      * size is either empty (normal display)  or small to indicate a panel that should have a smaller font size 
      *
      * Values: small
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class PropertySize(val value: kotlin.String) {
-        @Json(name = "small") small("small");
+        @SerialName("small") small("small");
     }
 
 }

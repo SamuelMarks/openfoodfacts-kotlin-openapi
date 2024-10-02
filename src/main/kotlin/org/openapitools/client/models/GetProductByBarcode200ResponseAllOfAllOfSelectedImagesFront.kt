@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * URLs of thumbnails image of image of type `image_type`
@@ -27,19 +27,19 @@ import com.squareup.moshi.JsonClass
  * @param thumb Thumbnail urls of product image (front) in smallest format 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfSelectedImagesFront (
 
     /* Thumbnail urls of product image (front) adapted to display on product page  */
-    @Json(name = "display")
+    @SerialName("display")
     val display: kotlin.Any? = null,
 
     /* Thumbnail urls of product image (front) adapted to display on product list page  */
-    @Json(name = "small")
+    @SerialName("small")
     val small: kotlin.Any? = null,
 
     /* Thumbnail urls of product image (front) in smallest format  */
-    @Json(name = "thumb")
+    @SerialName("thumb")
     val thumb: kotlin.Any? = null
 
 ) {

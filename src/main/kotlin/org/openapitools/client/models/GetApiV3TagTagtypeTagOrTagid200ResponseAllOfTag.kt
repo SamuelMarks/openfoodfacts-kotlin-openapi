@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.Panels1
+import dev.upvote.api.models.Panels1
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -28,18 +28,18 @@ import com.squareup.moshi.JsonClass
  * @param knowledgePanels 
  */
 
-
+@Serializable
 data class GetApiV3TagTagtypeTagOrTagid200ResponseAllOfTag (
 
     /* Canonicalized tagid corresponding to the input tag_or_tagid */
-    @Json(name = "tagid")
+    @SerialName("tagid")
     val tagid: kotlin.String? = null,
 
     /* Canonicalized tagtype */
-    @Json(name = "tagtype")
+    @SerialName("tagtype")
     val tagtype: kotlin.String? = null,
 
-    @Json(name = "knowledge_panels")
+    @SerialName("knowledge_panels")
     val knowledgePanels: Panels1? = null
 
 ) {

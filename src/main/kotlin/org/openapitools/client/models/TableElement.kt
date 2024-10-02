@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.TableElementColumnsInner
+import dev.upvote.api.models.TableElementColumnsInner
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Element to display a table.
@@ -29,21 +29,21 @@ import com.squareup.moshi.JsonClass
  * @param columns 
  */
 
-
+@Serializable
 data class TableElement (
 
     /* An id for the table. */
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
     /* Title of the column.  */
-    @Json(name = "title")
+    @SerialName("title")
     val title: kotlin.String? = null,
 
-    @Json(name = "rows")
+    @SerialName("rows")
     val rows: kotlin.String? = null,
 
-    @Json(name = "columns")
+    @SerialName("columns")
     val columns: kotlin.collections.List<TableElementColumnsInner>? = null
 
 ) {

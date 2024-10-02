@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A text in simple HTML format to display.  For some specific texts that correspond to a product field (e.g. a product name, the ingredients list of a product),the edit_field_* fields are used to indicate how to edit the field value.
@@ -35,51 +35,51 @@ import com.squareup.moshi.JsonClass
  * @param sourceLanguage Human readable source locale name
  */
 
-
+@Serializable
 data class TextElement (
 
     /* the type of text, might influence the way you display it.  */
-    @Json(name = "type")
+    @SerialName("type")
     val type: TextElement.Type? = null,
 
     /* Text to display in HTML format. */
-    @Json(name = "html")
+    @SerialName("html")
     val html: kotlin.String? = null,
 
     /* Language of the text. The name of the language is returned in the language requested when making the API call. e.g. if the text is in Polish, and the requested language is French, the language field will contain \"Polonais\" (French for \"Polish\"). Only set for specific fields such as the list of ingredients of a product. */
-    @Json(name = "language")
+    @SerialName("language")
     val language: kotlin.String? = null,
 
     /* 2 letter language code for the text. Only set for specific fields such as the list of ingredients of a product. */
-    @Json(name = "lc")
+    @SerialName("lc")
     val lc: kotlin.String? = null,
 
     /* id of the field used to edit this text in the product edit API. */
-    @Json(name = "edit_field_id")
+    @SerialName("edit_field_id")
     val editFieldId: kotlin.String? = null,
 
     /* Type of the product field. */
-    @Json(name = "edit_field_type")
+    @SerialName("edit_field_type")
     val editFieldType: kotlin.String? = null,
 
     /* Current value of the product field. This may differ from the html field which can contain extra formating. */
-    @Json(name = "edit_field_value")
+    @SerialName("edit_field_value")
     val editFieldValue: kotlin.String? = null,
 
     /* Link to the source */
-    @Json(name = "source_url")
+    @SerialName("source_url")
     val sourceUrl: kotlin.String? = null,
 
     /* name of the source */
-    @Json(name = "source_text")
+    @SerialName("source_text")
     val sourceText: kotlin.String? = null,
 
     /* Source locale name */
-    @Json(name = "source_lc")
+    @SerialName("source_lc")
     val sourceLc: kotlin.String? = null,
 
     /* Human readable source locale name */
-    @Json(name = "source_language")
+    @SerialName("source_language")
     val sourceLanguage: kotlin.String? = null
 
 ) {
@@ -89,11 +89,11 @@ data class TextElement (
      *
      * Values: summary,warning,notes
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Type(val value: kotlin.String) {
-        @Json(name = "summary") summary("summary"),
-        @Json(name = "warning") warning("warning"),
-        @Json(name = "notes") notes("notes");
+        @SerialName("summary") summary("summary"),
+        @SerialName("warning") warning("warning"),
+        @SerialName("notes") notes("notes");
     }
 
 }

@@ -15,9 +15,9 @@
 
 package org.openapitools.client.models
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 /**
  * 
@@ -33,43 +33,43 @@ import com.squareup.moshi.JsonClass
  * @param descriptionShort An eventual short description of the value of the property upon which this attribute is based
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner (
 
     /* Unique id of the attribute.  It will be use to match against preferences parameters.  */
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
     /* wether we have the information to really compute this criteria or not. */
-    @Json(name = "status")
+    @SerialName("status")
     val status: GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner.Status? = null,
 
     /* A descriptive sentence about the situation of the product concerning attribute  */
-    @Json(name = "title")
+    @SerialName("title")
     val title: kotlin.String? = null,
 
     /* a numeric value for the match, telling how much the products ranks well for this particular attribute. The higher the value, the better the match.  */
-    @Json(name = "match")
+    @SerialName("match")
     val match: kotlin.Float? = null,
 
     /* every attribute as a grade for a to e */
-    @Json(name = "grade")
+    @SerialName("grade")
     val grade: GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner.Grade? = null,
 
     /* The name of attribute, for eventual display */
-    @Json(name = "name")
+    @SerialName("name")
     val name: kotlin.String? = null,
 
     /* an icon representing the attribute match (often using a color) */
-    @Json(name = "icon_url")
+    @SerialName("icon_url")
     val iconUrl: kotlin.String? = null,
 
     /* An eventual description of the value of the property upon which this attribute is based */
-    @Json(name = "description")
+    @SerialName("description")
     val description: kotlin.String? = null,
 
     /* An eventual short description of the value of the property upon which this attribute is based */
-    @Json(name = "description_short")
+    @SerialName("description_short")
     val descriptionShort: kotlin.String? = null
 
 ) {
@@ -79,24 +79,24 @@ data class GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner (
      *
      * Values: known,unknown
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Status(val value: kotlin.String) {
-        @Json(name = "known") known("known"),
-        @Json(name = "unknown") unknown("unknown");
+        @SerialName("known") known("known"),
+        @SerialName("unknown") unknown("unknown");
     }
     /**
      * every attribute as a grade for a to e
      *
      * Values: unknown,a,b,c,d,e
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Grade(val value: kotlin.String) {
-        @Json(name = "unknown") unknown("unknown"),
-        @Json(name = "a") a("a"),
-        @Json(name = "b") b("b"),
-        @Json(name = "c") c("c"),
-        @Json(name = "d") d("d"),
-        @Json(name = "e") e("e");
+        @SerialName("unknown") unknown("unknown"),
+        @SerialName("a") a("a"),
+        @SerialName("b") b("b"),
+        @SerialName("c") c("c"),
+        @SerialName("d") d("d"),
+        @SerialName("e") e("e");
     }
 
 }

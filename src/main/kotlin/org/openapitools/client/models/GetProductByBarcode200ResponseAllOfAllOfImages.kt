@@ -15,11 +15,11 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImages1
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImagesFront
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImages1
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImagesFront
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * This contains properties for all images contained on the product. 
@@ -28,13 +28,13 @@ import com.squareup.moshi.JsonClass
  * @param front 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfImages (
 
-    @Json(name = "1")
+    @SerialName("1")
     val _1: GetProductByBarcode200ResponseAllOfAllOfImages1? = null,
 
-    @Json(name = "front")
+    @SerialName("front")
     val front: GetProductByBarcode200ResponseAllOfAllOfImagesFront? = null
 
 ) {

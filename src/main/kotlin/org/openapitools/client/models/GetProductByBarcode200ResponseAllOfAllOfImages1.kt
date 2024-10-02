@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImages1Sizes
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImages1Sizes
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * This represents an image uploaded for this product. 
@@ -28,18 +28,18 @@ import com.squareup.moshi.JsonClass
  * @param uploader The contributor that uploaded the image. 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfImages1 (
 
-    @Json(name = "sizes")
+    @SerialName("sizes")
     val sizes: GetProductByBarcode200ResponseAllOfAllOfImages1Sizes? = null,
 
     /* The time the image was uploaded (as unix timestamp).  */
-    @Json(name = "uploaded_t")
+    @SerialName("uploaded_t")
     val uploadedT: kotlin.String? = null,
 
     /* The contributor that uploaded the image.  */
-    @Json(name = "uploader")
+    @SerialName("uploader")
     val uploader: kotlin.String? = null
 
 ) {

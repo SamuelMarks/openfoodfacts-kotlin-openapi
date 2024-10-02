@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImages1SizesFull
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImages1SizesFull
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The available image sizes for the product (both reduced and full).  The reduced images are the ones with numbers as the key( 100, 200 etc)  while the full images have `full` as the key. 
@@ -26,10 +26,10 @@ import com.squareup.moshi.JsonClass
  * @param full 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfImages1Sizes (
 
-    @Json(name = "full")
+    @SerialName("full")
     val full: GetProductByBarcode200ResponseAllOfAllOfImages1SizesFull? = null
 
 ) {

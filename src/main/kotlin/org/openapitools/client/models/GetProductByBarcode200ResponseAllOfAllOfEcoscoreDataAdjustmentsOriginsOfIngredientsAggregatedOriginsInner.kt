@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -26,13 +26,13 @@ import com.squareup.moshi.JsonClass
  * @param percent 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredientsAggregatedOriginsInner (
 
-    @Json(name = "origin")
+    @SerialName("origin")
     val origin: kotlin.String? = null,
 
-    @Json(name = "percent")
+    @SerialName("percent")
     val percent: kotlin.Int? = null
 
 ) {

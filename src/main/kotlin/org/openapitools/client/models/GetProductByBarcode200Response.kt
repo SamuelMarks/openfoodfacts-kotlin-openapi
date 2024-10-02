@@ -15,27 +15,27 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfCategoriesProperties
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreData
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImages
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsAnalysis
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsInner
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNutrientLevels
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNutriments
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNutriscoreData
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfOwnerFields
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSelectedImages
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSourcesFields
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSourcesInner
-import org.openapitools.client.models.PackagingComponentREAD
-import org.openapitools.client.models.Panels
-import org.openapitools.client.models.ResponseStatusResult
-import org.openapitools.client.models.WarningOrErrorMessage
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfCategoriesProperties
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreData
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImages
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsAnalysis
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsInner
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNutrientLevels
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNutriments
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNutriscoreData
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSelectedImages
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSourcesFields
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSourcesInner
+import dev.upvote.api.models.PackagingComponentREAD
+import dev.upvote.api.models.Panels
+import dev.upvote.api.models.ResponseStatusResult
+import dev.upvote.api.models.WarningOrErrorMessage
+import kotlinx.serialization.descriptors.StructureKind
 
 /**
  * 
@@ -254,715 +254,715 @@ import com.squareup.moshi.JsonClass
  * @param attributeGroups Each element is an attribute that can help compute a personal ranking for the product
  */
 
-
+@Serializable
 data class GetProductByBarcode200Response (
 
     /* Overall status of the request: whether it failed or succeeded, with or without warnings or errors. */
-    @Json(name = "status_id")
+    @SerialName("status_id")
     val statusId: GetProductByBarcode200Response.StatusId? = null,
 
-    @Json(name = "result")
+    @SerialName("result")
     val result: ResponseStatusResult? = null,
 
     /* List of warnings. Warnings are used to alert about something that may be wrong, but is not necessarily wrong (e.g. a nutrient value that is unexpectedly high). */
-    @Json(name = "warnings")
+    @SerialName("warnings")
     val warnings: kotlin.collections.List<WarningOrErrorMessage>? = null,
 
     /* List of errors. Errors are used to alert about something that is definitely wrong (e.g. a nutrient value thaty is impossibly high). */
-    @Json(name = "errors")
+    @SerialName("errors")
     val errors: kotlin.collections.List<WarningOrErrorMessage>? = null,
 
     /* Abbreviated name in requested language */
-    @Json(name = "abbreviated_product_name")
+    @SerialName("abbreviated_product_name")
     val abbreviatedProductName: kotlin.String? = null,
 
     /* barcode of the product (can be EAN-13 or internal codes for some food stores), for products without a barcode, Open Food Facts assigns a number starting with the 200 reserved prefix  */
-    @Json(name = "code")
+    @SerialName("code")
     val code: kotlin.String? = null,
 
-    @Json(name = "codes_tags")
+    @SerialName("codes_tags")
     val codesTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Legal name of the product as regulated by the European authorities.  */
-    @Json(name = "generic_name")
+    @SerialName("generic_name")
     val genericName: kotlin.String? = null,
 
     /* internal identifier for the product, usually set to the value of `code`, except on the producers platform where it is prefixed by the owner  */
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
     /* Main language of the product. This is a duplicate of `lang` property (for historical reasons).  */
-    @Json(name = "lc")
+    @SerialName("lc")
     val lc: kotlin.String? = null,
 
     /* Main language of the product.  This should be the main language of product packaging (if one is predominant).  Main language is also used to decide which ingredients list to parse.  */
-    @Json(name = "lang")
+    @SerialName("lang")
     val lang: kotlin.String? = null,
 
     /* Nova group as an integer from 1 to 4. See https://world.openfoodfacts.org/nova  */
-    @Json(name = "nova_group")
+    @SerialName("nova_group")
     val novaGroup: kotlin.Int? = null,
 
-    @Json(name = "nova_groups")
+    @SerialName("nova_groups")
     val novaGroups: kotlin.String? = null,
 
-    @Json(name = "obsolete")
+    @SerialName("obsolete")
     val obsolete: kotlin.String? = null,
 
     /* A date at which the product was declared obsolete. This means it's not produced any more.  */
-    @Json(name = "obsolete_since_date")
+    @SerialName("obsolete_since_date")
     val obsoleteSinceDate: kotlin.String? = null,
 
     /* The name of the product  */
-    @Json(name = "product_name")
+    @SerialName("product_name")
     val productName: kotlin.String? = null,
 
     /* The name of the product can also be in many other languages like product_name_fr (for French).  */
-    @Json(name = "product_name_en")
+    @SerialName("product_name_en")
     val productNameEn: kotlin.String? = null,
 
     /* The size in g or ml for the whole product. It's a normalized version of the quantity field.  */
-    @Json(name = "product_quantity")
+    @SerialName("product_quantity")
     val productQuantity: kotlin.String? = null,
 
     /* The unit (either g or ml) for the correponding product_quantity.  */
-    @Json(name = "product_quantity_unit")
+    @SerialName("product_quantity_unit")
     val productQuantityUnit: kotlin.String? = null,
 
     /* Quantity and Unit.  */
-    @Json(name = "quantity")
+    @SerialName("quantity")
     val quantity: kotlin.String? = null,
 
     /* Number of food additives.  */
-    @Json(name = "additives_n")
+    @SerialName("additives_n")
     val additivesN: kotlin.Int? = null,
 
-    @Json(name = "checked")
+    @SerialName("checked")
     val checked: kotlin.String? = null,
 
-    @Json(name = "complete")
+    @SerialName("complete")
     val complete: kotlin.Int? = null,
 
-    @Json(name = "completeness")
-    val completeness: java.math.BigDecimal? = null,
+    @SerialName("completeness")
+    val completeness: Double? = null,
 
     /* See also: `ecoscore_tags`  */
-    @Json(name = "ecoscore_grade")
+    @SerialName("ecoscore_grade")
     val ecoscoreGrade: kotlin.String? = null,
 
     /* See also: `ecoscore_tags`  */
-    @Json(name = "ecoscore_score")
+    @SerialName("ecoscore_score")
     val ecoscoreScore: kotlin.Int? = null,
 
-    @Json(name = "food_groups")
+    @SerialName("food_groups")
     val foodGroups: kotlin.String? = null,
 
-    @Json(name = "food_groups_tags")
+    @SerialName("food_groups_tags")
     val foodGroupsTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "nutrient_levels")
+    @SerialName("nutrient_levels")
     val nutrientLevels: GetProductByBarcode200ResponseAllOfAllOfNutrientLevels? = null,
 
     /* Recycling instructions as raw text, e.g. Plastic bottle to recycle, Plastic cap to recycle. This will get automatically parsed and will be used to compute the Eco-Score. You can either request it (if it exists) or send it in a specific language.  */
-    @Json(name = "packaging_text")
+    @SerialName("packaging_text")
     val packagingText: kotlin.String? = null,
 
     /* The packagings object is an array of individual packaging component objects.  The Packaging data document explains how packaging data is structured in Open Food Facts: https://openfoodfacts.github.io/openfoodfacts-server/dev/explain-packaging-data/  The shape, material and recycling properties of each packaging component are linked to entries in the packaging_shapes, packaging_materials and packaging_recycling taxonomies:  https://world.openfoodfacts.org/data/taxonomies/packaging_shapes.json https://world.openfoodfacts.org/data/taxonomies/packaging_materials.json https://world.openfoodfacts.org/data/taxonomies/packaging_recycling.json  If the tags_lc field is set, the properties will include a lc_name field with the translation in the requested language. */
-    @Json(name = "packagings")
+    @SerialName("packagings")
     val packagings: kotlin.collections.List<PackagingComponentREAD>? = null,
 
     /* Indicate if the packagings array contains all the packaging parts of the product. This field can be set by users when they enter or verify packaging data. Possible values are 0 or 1. */
-    @Json(name = "packagings_complete")
+    @SerialName("packagings_complete")
     val packagingsComplete: kotlin.Int? = null,
 
     /* Category of food according to [French Nutrition and Health Program](https://fr.wikipedia.org/wiki/Programme_national_nutrition_sant%C3%A9)  */
-    @Json(name = "pnns_groups_1")
+    @SerialName("pnns_groups_1")
     val pnnsGroups1: kotlin.String? = null,
 
-    @Json(name = "pnns_groups_1_tags")
+    @SerialName("pnns_groups_1_tags")
     val pnnsGroups1Tags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Sub Category of food according to [French Nutrition and Health Program](https://fr.wikipedia.org/wiki/Programme_national_nutrition_sant%C3%A9)  */
-    @Json(name = "pnns_groups_2")
+    @SerialName("pnns_groups_2")
     val pnnsGroups2: kotlin.String? = null,
 
-    @Json(name = "pnns_groups_2_tags")
+    @SerialName("pnns_groups_2_tags")
     val pnnsGroups2Tags: kotlin.collections.List<kotlin.String>? = null,
 
     /* An imprecise measurement of popularity based on Scan statistics. A higher value means higher popularity.  */
-    @Json(name = "popularity_key")
+    @SerialName("popularity_key")
     val popularityKey: kotlin.Int? = null,
 
     /* Indicators for the popularity of a product, like the amount of scans in a specific year.  */
-    @Json(name = "popularity_tags")
+    @SerialName("popularity_tags")
     val popularityTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "scans_n")
+    @SerialName("scans_n")
     val scansN: kotlin.Int? = null,
 
-    @Json(name = "unique_scans_n")
+    @SerialName("unique_scans_n")
     val uniqueScansN: kotlin.Int? = null,
 
     /* Normalized version of serving_size. Note that this is NOT the number of servings by product. <small>(in perl, see `normalize_serving_size`)</small>  */
-    @Json(name = "serving_quantity")
+    @SerialName("serving_quantity")
     val servingQuantity: kotlin.String? = null,
 
     /* The unit (either g or ml) for the correponding serving_quantity.  */
-    @Json(name = "serving_quantity_unit")
+    @SerialName("serving_quantity_unit")
     val servingQuantityUnit: kotlin.String? = null,
 
     /* Serving size text (generally in g or ml). We expect a quantity + unit but the user is free to input any string.  */
-    @Json(name = "serving_size")
+    @SerialName("serving_size")
     val servingSize: kotlin.String? = null,
 
     /* List of brands (not taxonomized) */
-    @Json(name = "brands")
+    @SerialName("brands")
     val brands: kotlin.String? = null,
 
-    @Json(name = "brands_tags")
+    @SerialName("brands_tags")
     val brandsTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "categories")
+    @SerialName("categories")
     val categories: kotlin.String? = null,
 
-    @Json(name = "categories_hierarchy")
+    @SerialName("categories_hierarchy")
     val categoriesHierarchy: kotlin.collections.List<kotlin.String>? = null,
 
     /* Categories language code */
-    @Json(name = "categories_lc")
+    @SerialName("categories_lc")
     val categoriesLc: kotlin.String? = null,
 
-    @Json(name = "categories_tags")
+    @SerialName("categories_tags")
     val categoriesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "checkers_tags")
+    @SerialName("checkers_tags")
     val checkersTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "cities")
+    @SerialName("cities")
     val cities: kotlin.String? = null,
 
-    @Json(name = "cities_tags")
+    @SerialName("cities_tags")
     val citiesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "correctors_tags")
+    @SerialName("correctors_tags")
     val correctorsTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* List of countries where the product is sold.  */
-    @Json(name = "countries")
+    @SerialName("countries")
     val countries: kotlin.String? = null,
 
-    @Json(name = "countries_hierarchy")
+    @SerialName("countries_hierarchy")
     val countriesHierarchy: kotlin.collections.List<kotlin.String>? = null,
 
     /* Countries language code */
-    @Json(name = "countries_lc")
+    @SerialName("countries_lc")
     val countriesLc: kotlin.String? = null,
 
-    @Json(name = "countries_tags")
+    @SerialName("countries_tags")
     val countriesTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* All ecoscore of a product. Most of the time it's only one value, but it might eventually be more for products composed of sub-products. See also: `ecoscore_score`, `ecoscore_grade`.  */
-    @Json(name = "ecoscore_tags")
+    @SerialName("ecoscore_tags")
     val ecoscoreTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Packager code. EMB is the French system of traceability codes for packager.  */
-    @Json(name = "emb_codes")
+    @SerialName("emb_codes")
     val embCodes: kotlin.String? = null,
 
-    @Json(name = "emb_codes_orig")
+    @SerialName("emb_codes_orig")
     val embCodesOrig: kotlin.String? = null,
 
-    @Json(name = "emb_codes_tags")
+    @SerialName("emb_codes_tags")
     val embCodesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "labels")
+    @SerialName("labels")
     val labels: kotlin.String? = null,
 
-    @Json(name = "labels_hierarchy")
+    @SerialName("labels_hierarchy")
     val labelsHierarchy: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "labels_lc")
+    @SerialName("labels_lc")
     val labelsLc: kotlin.String? = null,
 
-    @Json(name = "labels_tags")
+    @SerialName("labels_tags")
     val labelsTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* The data as a series of tag: `yyyy-mm-dd`, `yyyy-mm`, `yyyy`  */
-    @Json(name = "entry_dates_tags")
+    @SerialName("entry_dates_tags")
     val entryDatesTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Places where the product was manufactured or transformed.  */
-    @Json(name = "manufacturing_places")
+    @SerialName("manufacturing_places")
     val manufacturingPlaces: kotlin.String? = null,
 
-    @Json(name = "manufacturing_places_tags")
+    @SerialName("manufacturing_places_tags")
     val manufacturingPlacesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "nova_groups_tags")
+    @SerialName("nova_groups_tags")
     val novaGroupsTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "nutrient_levels_tags")
+    @SerialName("nutrient_levels_tags")
     val nutrientLevelsTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "image_front_small_url")
+    @SerialName("image_front_small_url")
     val imageFrontSmallUrl: kotlin.String? = null,
 
-    @Json(name = "image_front_thumb_url")
+    @SerialName("image_front_thumb_url")
     val imageFrontThumbUrl: kotlin.String? = null,
 
-    @Json(name = "image_front_url")
+    @SerialName("image_front_url")
     val imageFrontUrl: kotlin.String? = null,
 
-    @Json(name = "image_nutrition_small_url")
+    @SerialName("image_nutrition_small_url")
     val imageNutritionSmallUrl: kotlin.String? = null,
 
-    @Json(name = "image_nutrition_thumb_url")
+    @SerialName("image_nutrition_thumb_url")
     val imageNutritionThumbUrl: kotlin.String? = null,
 
-    @Json(name = "image_nutrition_url")
+    @SerialName("image_nutrition_url")
     val imageNutritionUrl: kotlin.String? = null,
 
-    @Json(name = "image_small_url")
+    @SerialName("image_small_url")
     val imageSmallUrl: kotlin.String? = null,
 
-    @Json(name = "image_thumb_url")
+    @SerialName("image_thumb_url")
     val imageThumbUrl: kotlin.String? = null,
 
-    @Json(name = "image_url")
+    @SerialName("image_url")
     val imageUrl: kotlin.String? = null,
 
-    @Json(name = "images")
+    @SerialName("images")
     val images: GetProductByBarcode200ResponseAllOfAllOfImages? = null,
 
-    @Json(name = "last_image_dates_tags")
+    @SerialName("last_image_dates_tags")
     val lastImageDatesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "last_image_t")
+    @SerialName("last_image_t")
     val lastImageT: kotlin.Int? = null,
 
-    @Json(name = "selected_images")
+    @SerialName("selected_images")
     val selectedImages: GetProductByBarcode200ResponseAllOfAllOfSelectedImages? = null,
 
-    @Json(name = "ecoscore_data")
+    @SerialName("ecoscore_data")
     val ecoscoreData: GetProductByBarcode200ResponseAllOfAllOfEcoscoreData? = null,
 
-    @Json(name = "ecoscore_extended_data_version")
+    @SerialName("ecoscore_extended_data_version")
     val ecoscoreExtendedDataVersion: kotlin.String? = null,
 
-    @Json(name = "environment_impact_level")
+    @SerialName("environment_impact_level")
     val environmentImpactLevel: kotlin.String? = null,
 
-    @Json(name = "environment_impact_level_tags")
+    @SerialName("environment_impact_level_tags")
     val environmentImpactLevelTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "additives_tags")
+    @SerialName("additives_tags")
     val additivesTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* comma separated list of allergens */
-    @Json(name = "allergens")
+    @SerialName("allergens")
     val allergens: kotlin.String? = null,
 
     /* language in which `allergens` where input */
-    @Json(name = "allergens_lc")
+    @SerialName("allergens_lc")
     val allergensLc: kotlin.String? = null,
 
-    @Json(name = "allergens_hierarchy")
+    @SerialName("allergens_hierarchy")
     val allergensHierarchy: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "allergens_tags")
+    @SerialName("allergens_tags")
     val allergensTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* This structure gives the different ingredients and some information about them, like estimate on their quantity.  */
-    @Json(name = "ingredients")
+    @SerialName("ingredients")
     val ingredients: kotlin.collections.List<GetProductByBarcode200ResponseAllOfAllOfIngredientsInner>? = null,
 
-    @Json(name = "ingredients_analysis")
+    @SerialName("ingredients_analysis")
     val ingredientsAnalysis: GetProductByBarcode200ResponseAllOfAllOfIngredientsAnalysis? = null,
 
-    @Json(name = "ingredients_analysis_tags")
+    @SerialName("ingredients_analysis_tags")
     val ingredientsAnalysisTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "ingredients_from_or_that_may_be_from_palm_oil_n")
+    @SerialName("ingredients_from_or_that_may_be_from_palm_oil_n")
     val ingredientsFromOrThatMayBeFromPalmOilN: kotlin.Int? = null,
 
-    @Json(name = "ingredients_from_palm_oil_n")
+    @SerialName("ingredients_from_palm_oil_n")
     val ingredientsFromPalmOilN: kotlin.Int? = null,
 
-    @Json(name = "ingredients_from_palm_oil_tags")
+    @SerialName("ingredients_from_palm_oil_tags")
     val ingredientsFromPalmOilTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "ingredients_hierarchy")
+    @SerialName("ingredients_hierarchy")
     val ingredientsHierarchy: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "ingredients_n")
+    @SerialName("ingredients_n")
     val ingredientsN: kotlin.Int? = null,
 
-    @Json(name = "ingredients_n_tags")
+    @SerialName("ingredients_n_tags")
     val ingredientsNTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "ingredients_original_tags")
+    @SerialName("ingredients_original_tags")
     val ingredientsOriginalTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "ingredients_percent_analysis")
+    @SerialName("ingredients_percent_analysis")
     val ingredientsPercentAnalysis: kotlin.Int? = null,
 
     /* Number of sweeteners additives in the ingredients. Undefined if ingredients are not specified.  */
-    @Json(name = "ingredients_sweeteners_n")
+    @SerialName("ingredients_sweeteners_n")
     val ingredientsSweetenersN: kotlin.Int? = null,
 
     /* Number of non-nutritive sweeteners additives (as specified in the Nutri-Score formula) in the ingredients. Undefined if ingredients are not specified.  */
-    @Json(name = "ingredients_non_nutritive_sweeteners_n")
+    @SerialName("ingredients_non_nutritive_sweeteners_n")
     val ingredientsNonNutritiveSweetenersN: kotlin.Int? = null,
 
-    @Json(name = "ingredients_tags")
+    @SerialName("ingredients_tags")
     val ingredientsTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Language that was used to parse the ingredient list. If `ingredients_text` is available for the product main language (`lang`), `ingredients_lc=lang`, otherwise we look at `ingredients_text` fields for other languages and set `ingredients_lc` to the first non-empty `ingredient_text`.   */
-    @Json(name = "ingredients_lc")
+    @SerialName("ingredients_lc")
     val ingredientsLc: kotlin.String? = null,
 
     /* Raw list of ingredients. This will get automatically parsed and get used to compute the Eco-Score or find allergens, etc..  It's a copy of ingredients_text in the main language of the product (see `lang` proprety).  */
-    @Json(name = "ingredients_text")
+    @SerialName("ingredients_text")
     val ingredientsText: kotlin.String? = null,
 
     /* Same text as `ingredients_text` but where allergens have HTML elements around them to identify them  */
-    @Json(name = "ingredients_text_with_allergens")
+    @SerialName("ingredients_text_with_allergens")
     val ingredientsTextWithAllergens: kotlin.String? = null,
 
-    @Json(name = "ingredients_that_may_be_from_palm_oil_n")
+    @SerialName("ingredients_that_may_be_from_palm_oil_n")
     val ingredientsThatMayBeFromPalmOilN: kotlin.Int? = null,
 
-    @Json(name = "ingredients_that_may_be_from_palm_oil_tags")
+    @SerialName("ingredients_that_may_be_from_palm_oil_tags")
     val ingredientsThatMayBeFromPalmOilTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "ingredients_with_specified_percent_n")
+    @SerialName("ingredients_with_specified_percent_n")
     val ingredientsWithSpecifiedPercentN: kotlin.Int? = null,
 
-    @Json(name = "ingredients_with_specified_percent_sum")
+    @SerialName("ingredients_with_specified_percent_sum")
     val ingredientsWithSpecifiedPercentSum: kotlin.Int? = null,
 
-    @Json(name = "ingredients_with_unspecified_percent_n")
+    @SerialName("ingredients_with_unspecified_percent_n")
     val ingredientsWithUnspecifiedPercentN: kotlin.Int? = null,
 
-    @Json(name = "ingredients_with_unspecified_percent_sum")
+    @SerialName("ingredients_with_unspecified_percent_sum")
     val ingredientsWithUnspecifiedPercentSum: kotlin.Int? = null,
 
-    @Json(name = "known_ingredients_n")
+    @SerialName("known_ingredients_n")
     val knownIngredientsN: kotlin.Int? = null,
 
     /* Origins of ingredients  */
-    @Json(name = "origins")
+    @SerialName("origins")
     val origins: kotlin.String? = null,
 
-    @Json(name = "origins_hierarchy")
+    @SerialName("origins_hierarchy")
     val originsHierarchy: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "origins_lc")
+    @SerialName("origins_lc")
     val originsLc: kotlin.String? = null,
 
-    @Json(name = "origins_tags")
+    @SerialName("origins_tags")
     val originsTags: kotlin.collections.List<kotlin.Any>? = null,
 
     /* List of substances that might cause allergies that are present in trace amounts in the product (this does not include the ingredients, as they are not only present in trace amounts). It is taxonomized with the allergens taxonomy.  */
-    @Json(name = "traces")
+    @SerialName("traces")
     val traces: kotlin.String? = null,
 
-    @Json(name = "traces_hierarchy")
+    @SerialName("traces_hierarchy")
     val tracesHierarchy: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "traces_lc")
+    @SerialName("traces_lc")
     val tracesLc: kotlin.String? = null,
 
-    @Json(name = "traces_tags")
+    @SerialName("traces_tags")
     val tracesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "unknown_ingredients_n")
+    @SerialName("unknown_ingredients_n")
     val unknownIngredientsN: kotlin.Int? = null,
 
     /* When a product does not have nutrition data displayed on the packaging, the user can check the field \"Nutrition facts are not specified on the product\". By doing so, the no_nutrition_data field takes the value \"on\". This case is frequent (thousands of products).  */
-    @Json(name = "no_nutrition_data")
+    @SerialName("no_nutrition_data")
     val noNutritionData: kotlin.String? = null,
 
     /* The nutrition data on the package can be per serving or per 100g.  This is essential to understand if `<nutrient>_value` and `<nutrient>` values in `nutriments` applies for a serving or for 100g.  **IMPORTANT:** When writing products, this setting applies to all existing nutrients values for the product, not only the nutrient values sent in the write request. So it should not be changed unless all nutrients values are provided with values that match the nutrition_data_per field.  */
-    @Json(name = "nutrition_data_per")
+    @SerialName("nutrition_data_per")
     val nutritionDataPer: GetProductByBarcode200Response.NutritionDataPer? = null,
 
     /* The nutrition data for prepared product on the package (if any) can be per serving or per 100g.  This is essential to understand if `<nutrient>_prepared_value` and `<nutrient>_prepared` values in `nutriments` applies for a serving or for 100g.  See also important note on `nutrition_data_per`.  */
-    @Json(name = "nutrition_data_prepared_per")
+    @SerialName("nutrition_data_prepared_per")
     val nutritionDataPreparedPer: GetProductByBarcode200Response.NutritionDataPreparedPer? = null,
 
-    @Json(name = "nutriments")
+    @SerialName("nutriments")
     val nutriments: GetProductByBarcode200ResponseAllOfAllOfNutriments? = null,
 
-    @Json(name = "nutriscore_data")
+    @SerialName("nutriscore_data")
     val nutriscoreData: GetProductByBarcode200ResponseAllOfAllOfNutriscoreData? = null,
 
     /* Nutri-Score for the product as a letter.  See https://world.openfoodfacts.org/nutriscore.  */
-    @Json(name = "nutriscore_grade")
+    @SerialName("nutriscore_grade")
     val nutriscoreGrade: GetProductByBarcode200Response.NutriscoreGrade? = null,
 
     /* Nutri-Score for the product as an integer (see also `nutriscore_grade`).  */
-    @Json(name = "nutriscore_score")
+    @SerialName("nutriscore_score")
     val nutriscoreScore: kotlin.Int? = null,
 
-    @Json(name = "nutriscore_score_opposite")
+    @SerialName("nutriscore_score_opposite")
     val nutriscoreScoreOpposite: kotlin.Int? = null,
 
     /* Nutrition grade (‘a’ to ‘e’), https://world.openfoodfacts.org/nutriscore.  */
-    @Json(name = "nutrition_grade_fr")
+    @SerialName("nutrition_grade_fr")
     val nutritionGradeFr: kotlin.String? = null,
 
     /* Nutrition grades as a comma separated list.  Some products with multiple components might have multiple Nutri-Score  */
-    @Json(name = "nutrition_grades")
+    @SerialName("nutrition_grades")
     val nutritionGrades: kotlin.String? = null,
 
-    @Json(name = "nutrition_grades_tags")
+    @SerialName("nutrition_grades_tags")
     val nutritionGradesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "nutrition_score_beverage")
+    @SerialName("nutrition_score_beverage")
     val nutritionScoreBeverage: kotlin.Int? = null,
 
-    @Json(name = "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients")
+    @SerialName("nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients")
     val nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredients: kotlin.Int? = null,
 
-    @Json(name = "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients_value")
+    @SerialName("nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients_value")
     val nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredientsValue: kotlin.Int? = null,
 
-    @Json(name = "nutrition_score_warning_no_fiber")
+    @SerialName("nutrition_score_warning_no_fiber")
     val nutritionScoreWarningNoFiber: kotlin.Int? = null,
 
-    @Json(name = "other_nutritional_substances_tags")
+    @SerialName("other_nutritional_substances_tags")
     val otherNutritionalSubstancesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "unknown_nutrients_tags")
+    @SerialName("unknown_nutrients_tags")
     val unknownNutrientsTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "vitamins_tags")
+    @SerialName("vitamins_tags")
     val vitaminsTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "data_quality_bugs_tags")
+    @SerialName("data_quality_bugs_tags")
     val dataQualityBugsTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "data_quality_errors_tags")
+    @SerialName("data_quality_errors_tags")
     val dataQualityErrorsTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "data_quality_info_tags")
+    @SerialName("data_quality_info_tags")
     val dataQualityInfoTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "data_quality_tags")
+    @SerialName("data_quality_tags")
     val dataQualityTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "data_quality_warnings_tags")
+    @SerialName("data_quality_warnings_tags")
     val dataQualityWarningsTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Source of data imported from producers.  */
-    @Json(name = "data_sources")
+    @SerialName("data_sources")
     val dataSources: kotlin.String? = null,
 
-    @Json(name = "data_sources_tags")
+    @SerialName("data_sources_tags")
     val dataSourcesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "last_check_dates_tags")
+    @SerialName("last_check_dates_tags")
     val lastCheckDatesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "last_checked_t")
+    @SerialName("last_checked_t")
     val lastCheckedT: kotlin.Int? = null,
 
-    @Json(name = "last_checker")
+    @SerialName("last_checker")
     val lastChecker: kotlin.String? = null,
 
     /* comma separated list of values indicating some states of the product, like things to be done, or to be completed. See [states taxonomy](https://static.openfoodfacts.net/data/taxonomies/states.json)  */
-    @Json(name = "states")
+    @SerialName("states")
     val states: kotlin.String? = null,
 
-    @Json(name = "states_hierarchy")
+    @SerialName("states_hierarchy")
     val statesHierarchy: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "states_tags")
+    @SerialName("states_tags")
     val statesTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Information about different aspect of the product  */
-    @Json(name = "misc_tags")
+    @SerialName("misc_tags")
     val miscTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "additives_original_tags")
+    @SerialName("additives_original_tags")
     val additivesOriginalTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "additives_prev_original_tags")
+    @SerialName("additives_prev_original_tags")
     val additivesPrevOriginalTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "added_countries_tags")
+    @SerialName("added_countries_tags")
     val addedCountriesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "allergens_from_ingredients")
+    @SerialName("allergens_from_ingredients")
     val allergensFromIngredients: kotlin.String? = null,
 
-    @Json(name = "allergens_from_user")
+    @SerialName("allergens_from_user")
     val allergensFromUser: kotlin.String? = null,
 
-    @Json(name = "amino_acids_prev_tags")
+    @SerialName("amino_acids_prev_tags")
     val aminoAcidsPrevTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "amino_acids_tags")
+    @SerialName("amino_acids_tags")
     val aminoAcidsTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "carbon_footprint_percent_of_known_ingredients")
+    @SerialName("carbon_footprint_percent_of_known_ingredients")
     val carbonFootprintPercentOfKnownIngredients: kotlin.Int? = null,
 
-    @Json(name = "categories_properties")
+    @SerialName("categories_properties")
     val categoriesProperties: GetProductByBarcode200ResponseAllOfAllOfCategoriesProperties? = null,
 
-    @Json(name = "categories_properties_tags")
+    @SerialName("categories_properties_tags")
     val categoriesPropertiesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "category_properties")
+    @SerialName("category_properties")
     val categoryProperties: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
 
-    @Json(name = "ciqual_food_name_tags")
+    @SerialName("ciqual_food_name_tags")
     val ciqualFoodNameTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* the category to use for comparison.  **TODO** explain how it is chosen.  */
-    @Json(name = "compared_to_category")
+    @SerialName("compared_to_category")
     val comparedToCategory: kotlin.String? = null,
 
-    @Json(name = "conservation_conditions")
+    @SerialName("conservation_conditions")
     val conservationConditions: kotlin.String? = null,
 
     /* Contact info of customer service.  */
-    @Json(name = "customer_service")
+    @SerialName("customer_service")
     val customerService: kotlin.String? = null,
 
-    @Json(name = "expiration_date")
+    @SerialName("expiration_date")
     val expirationDate: kotlin.String? = null,
 
     /* link to the product on the website of the producer  */
-    @Json(name = "link")
+    @SerialName("link")
     val link: kotlin.String? = null,
 
-    @Json(name = "main_countries_tags")
+    @SerialName("main_countries_tags")
     val mainCountriesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "minerals_prev_tags")
+    @SerialName("minerals_prev_tags")
     val mineralsPrevTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "minerals_tags")
+    @SerialName("minerals_tags")
     val mineralsTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "owner_fields")
-    val ownerFields: GetProductByBarcode200ResponseAllOfAllOfOwnerFields? = null,
+    @SerialName("owner_fields")
+    val ownerFields: Any? = null,
 
-    @Json(name = "nova_groups_markers")
+    @SerialName("nova_groups_markers")
     val novaGroupsMarkers: GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers? = null,
 
-    @Json(name = "nucleotides_tags")
+    @SerialName("nucleotides_tags")
     val nucleotidesTags: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "origin")
+    @SerialName("origin")
     val origin: kotlin.String? = null,
 
     /* Country, state, or city where the product can be purchased.  */
-    @Json(name = "purchase_places")
+    @SerialName("purchase_places")
     val purchasePlaces: kotlin.String? = null,
 
-    @Json(name = "purchase_places_tags")
+    @SerialName("purchase_places_tags")
     val purchasePlacesTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* Distributor name.  */
-    @Json(name = "stores")
+    @SerialName("stores")
     val stores: kotlin.String? = null,
 
-    @Json(name = "stores_tags")
+    @SerialName("stores_tags")
     val storesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "traces_from_ingredients")
+    @SerialName("traces_from_ingredients")
     val tracesFromIngredients: kotlin.String? = null,
 
-    @Json(name = "traces_from_user")
+    @SerialName("traces_from_user")
     val tracesFromUser: kotlin.String? = null,
 
     /* Date when the product was added (UNIX timestamp format). See also `entry_dates_tags`  */
-    @Json(name = "created_t")
+    @SerialName("created_t")
     val createdT: kotlin.Int? = null,
 
     /* The contributor who added the product first.  */
-    @Json(name = "creator")
+    @SerialName("creator")
     val creator: kotlin.String? = null,
 
     /* List of editors who edited the product.  */
-    @Json(name = "editors_tags")
+    @SerialName("editors_tags")
     val editorsTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "informers_tags")
+    @SerialName("informers_tags")
     val informersTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "interface_version_created")
+    @SerialName("interface_version_created")
     val interfaceVersionCreated: kotlin.String? = null,
 
-    @Json(name = "interface_version_modified")
+    @SerialName("interface_version_modified")
     val interfaceVersionModified: kotlin.String? = null,
 
-    @Json(name = "languages")
+    @SerialName("languages")
     val languages: kotlin.Any? = null,
 
     /* Same as `languages` but by language code, instead of language tags  */
-    @Json(name = "languages_codes")
+    @SerialName("languages_codes")
     val languagesCodes: kotlin.Any? = null,
 
-    @Json(name = "languages_hierarchy")
+    @SerialName("languages_hierarchy")
     val languagesHierarchy: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "languages_tags")
+    @SerialName("languages_tags")
     val languagesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "last_edit_dates_tags")
+    @SerialName("last_edit_dates_tags")
     val lastEditDatesTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "last_editor")
+    @SerialName("last_editor")
     val lastEditor: kotlin.String? = null,
 
     /* The username of the user who last modified the product.  */
-    @Json(name = "last_modified_by")
+    @SerialName("last_modified_by")
     val lastModifiedBy: kotlin.String? = null,
 
     /* Date when the product page was last modified.  */
-    @Json(name = "last_modified_t")
+    @SerialName("last_modified_t")
     val lastModifiedT: kotlin.Int? = null,
 
     /* Id of the producer in case he provides his own data about a product (producer platform).  */
-    @Json(name = "owner")
+    @SerialName("owner")
     val owner: kotlin.String? = null,
 
     /* Tagyfied version of owner  */
-    @Json(name = "owners_tags")
+    @SerialName("owners_tags")
     val ownersTags: kotlin.String? = null,
 
-    @Json(name = "photographers_tags")
+    @SerialName("photographers_tags")
     val photographersTags: kotlin.collections.List<kotlin.String>? = null,
 
     /* revision number of this product version (each edit adds a revision) */
-    @Json(name = "rev")
+    @SerialName("rev")
     val rev: kotlin.Int? = null,
 
-    @Json(name = "sources")
+    @SerialName("sources")
     val sources: kotlin.collections.List<GetProductByBarcode200ResponseAllOfAllOfSourcesInner>? = null,
 
-    @Json(name = "sources_fields")
+    @SerialName("sources_fields")
     val sourcesFields: GetProductByBarcode200ResponseAllOfAllOfSourcesFields? = null,
 
-    @Json(name = "teams")
+    @SerialName("teams")
     val teams: kotlin.String? = null,
 
-    @Json(name = "teams_tags")
+    @SerialName("teams_tags")
     val teamsTags: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "update_key")
+    @SerialName("update_key")
     val updateKey: kotlin.String? = null,
 
-    @Json(name = "knowledge_panels")
+    @SerialName("knowledge_panels")
     val knowledgePanels: Panels? = null,
 
     /* Each element is an attribute that can help compute a personal ranking for the product */
-    @Json(name = "attribute_groups")
+    @SerialName("attribute_groups")
     val attributeGroups: kotlin.collections.List<GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner>? = null
 
 ) {
@@ -972,45 +972,45 @@ data class GetProductByBarcode200Response (
      *
      * Values: success,success_with_warnings,success_with_errors,failure
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class StatusId(val value: kotlin.String) {
-        @Json(name = "success") success("success"),
-        @Json(name = "success_with_warnings") success_with_warnings("success_with_warnings"),
-        @Json(name = "success_with_errors") success_with_errors("success_with_errors"),
-        @Json(name = "failure") failure("failure");
+        @SerialName("success") success("success"),
+        @SerialName("success_with_warnings") success_with_warnings("success_with_warnings"),
+        @SerialName("success_with_errors") success_with_errors("success_with_errors"),
+        @SerialName("failure") failure("failure");
     }
     /**
      * The nutrition data on the package can be per serving or per 100g.  This is essential to understand if `<nutrient>_value` and `<nutrient>` values in `nutriments` applies for a serving or for 100g.  **IMPORTANT:** When writing products, this setting applies to all existing nutrients values for the product, not only the nutrient values sent in the write request. So it should not be changed unless all nutrients values are provided with values that match the nutrition_data_per field. 
      *
      * Values: serving,_100g
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class NutritionDataPer(val value: kotlin.String) {
-        @Json(name = "serving") serving("serving"),
-        @Json(name = "100g") _100g("100g");
+        @SerialName("serving") serving("serving"),
+        @SerialName("100g") _100g("100g");
     }
     /**
      * The nutrition data for prepared product on the package (if any) can be per serving or per 100g.  This is essential to understand if `<nutrient>_prepared_value` and `<nutrient>_prepared` values in `nutriments` applies for a serving or for 100g.  See also important note on `nutrition_data_per`. 
      *
      * Values: serving,_100g
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class NutritionDataPreparedPer(val value: kotlin.String) {
-        @Json(name = "serving") serving("serving"),
-        @Json(name = "100g") _100g("100g");
+        @SerialName("serving") serving("serving"),
+        @SerialName("100g") _100g("100g");
     }
     /**
      * Nutri-Score for the product as a letter.  See https://world.openfoodfacts.org/nutriscore. 
      *
      * Values: a,b,c,d,e
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class NutriscoreGrade(val value: kotlin.String) {
-        @Json(name = "a") a("a"),
-        @Json(name = "b") b("b"),
-        @Json(name = "c") c("c"),
-        @Json(name = "d") d("d"),
-        @Json(name = "e") e("e");
+        @SerialName("a") a("a"),
+        @SerialName("b") b("b"),
+        @SerialName("c") c("c"),
+        @SerialName("d") d("d"),
+        @SerialName("e") e("e");
     }
 
 }

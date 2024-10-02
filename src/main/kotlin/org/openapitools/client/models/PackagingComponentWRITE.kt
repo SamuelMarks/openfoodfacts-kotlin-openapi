@@ -15,12 +15,8 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.AnyOfLessThanGreaterThan
-import org.openapitools.client.models.PackagingComponentWRITEWeightMeasured
-import org.openapitools.client.models.PackagingComponentWRITEWeightSpecified
-
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Each packaging component has different properties to specify how many there are, its shape, material etc.  The shape, material and recycling properties will be mapped to one entry in the packaging_shapes, packaging_materials and packaging_recycling taxonomies.  For input, clients can either pass the id of a corresponding taxonomy entry (e.g. \"en:pizza-box\"), or a free text value prefixed with the language code of the text (e.g. \"en:Pizza box\", \"fr:boite à pizza\"). If the language code prefix is missing, the value of the \"lc\" field of the query will be used.  The resulting structure will contain the id of the canonical entry in the taxonomy if it good be matched, or the free text value prefixed with the language code otherwise.  For weights, the API is expecting a number with the number of grams. If a string is passed instead of a number, we will attempt to convert it to grams. The string may contain units (e.g. \"6.9 g\"), and use . or , as the decimal separator. Conversion may not work for all inputs. If a string was converted to a number, the API response will include a warning and specify the converted value.
@@ -36,41 +32,41 @@ import com.squareup.moshi.JsonClass
  * @param labels A comma separated list of labels, canonicalized with the packaging_labels taxonomy (e.g. \"en:FSC, fr:Encre végétale\")
  */
 
-
+@Serializable
 data class PackagingComponentWRITE (
 
     /* Number of units of this packaging component contained in the product (e.g. 6 for a pack of 6 bottles) */
-    @Json(name = "number_of_units")
+    @SerialName("number_of_units")
     val numberOfUnits: kotlin.Int? = null,
 
     /* The shape property is canonicalized using the packaging_shapes taxonomy. */
-    @Json(name = "shape")
-    val shape: AnyOfLessThanGreaterThan? = null,
+    @SerialName("shape")
+    val shape: Any? = null,
 
     /* The material property is canonicalized using the packaging_materials taxonomy. */
-    @Json(name = "material")
-    val material: AnyOfLessThanGreaterThan? = null,
+    @SerialName("material")
+    val material: Any? = null,
 
     /* The recycling property is canonicalized using the packaging_recycling taxonomy. */
-    @Json(name = "recycling")
-    val recycling: AnyOfLessThanGreaterThan? = null,
+    @SerialName("recycling")
+    val recycling: Any? = null,
 
     /* Quantity (weight or volume) of food product contained in the packaging component. (e.g. 75cl for a wine bottle) */
-    @Json(name = "quantity_per_unit")
+    @SerialName("quantity_per_unit")
     val quantityPerUnit: kotlin.String? = null,
 
-    @Json(name = "weight_specified")
-    val weightSpecified: PackagingComponentWRITEWeightSpecified? = null,
+    @SerialName("weight_specified")
+    val weightSpecified: Any? = null,
 
-    @Json(name = "weight_measured")
-    val weightMeasured: PackagingComponentWRITEWeightMeasured? = null,
+    @SerialName("weight_measured")
+    val weightMeasured: Any? = null,
 
     /* A comma separated list of brands / product names for the packaging component (e.g. \"Tetra Pak\", Tetra Brik\" */
-    @Json(name = "brands")
+    @SerialName("brands")
     val brands: kotlin.String? = null,
 
     /* A comma separated list of labels, canonicalized with the packaging_labels taxonomy (e.g. \"en:FSC, fr:Encre végétale\") */
-    @Json(name = "labels")
+    @SerialName("labels")
     val labels: kotlin.String? = null
 
 ) {

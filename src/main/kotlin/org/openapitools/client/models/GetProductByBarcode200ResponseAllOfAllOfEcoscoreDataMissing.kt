@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -27,16 +27,16 @@ import com.squareup.moshi.JsonClass
  * @param packagings 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataMissing (
 
-    @Json(name = "labels")
+    @SerialName("labels")
     val labels: kotlin.Int? = null,
 
-    @Json(name = "origins")
+    @SerialName("origins")
     val origins: kotlin.Int? = null,
 
-    @Json(name = "packagings")
+    @SerialName("packagings")
     val packagings: kotlin.Int? = null
 
 ) {

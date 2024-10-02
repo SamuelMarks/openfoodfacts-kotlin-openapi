@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredientsAggregatedOriginsInner
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredientsAggregatedOriginsInner
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -33,31 +33,31 @@ import com.squareup.moshi.JsonClass
  * @param warning 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredients (
 
-    @Json(name = "aggregated_origins")
+    @SerialName("aggregated_origins")
     val aggregatedOrigins: kotlin.collections.List<GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredientsAggregatedOriginsInner>? = null,
 
-    @Json(name = "epi_score")
+    @SerialName("epi_score")
     val epiScore: kotlin.Int? = null,
 
-    @Json(name = "epi_value")
+    @SerialName("epi_value")
     val epiValue: kotlin.Int? = null,
 
-    @Json(name = "origins_from_origins_field")
+    @SerialName("origins_from_origins_field")
     val originsFromOriginsField: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "transportation_scores")
+    @SerialName("transportation_scores")
     val transportationScores: kotlin.Any? = null,
 
-    @Json(name = "transportation_values")
+    @SerialName("transportation_values")
     val transportationValues: kotlin.Any? = null,
 
-    @Json(name = "values")
+    @SerialName("values")
     val propertyValues: kotlin.Any? = null,
 
-    @Json(name = "warning")
+    @SerialName("warning")
     val warning: kotlin.String? = null
 
 ) {

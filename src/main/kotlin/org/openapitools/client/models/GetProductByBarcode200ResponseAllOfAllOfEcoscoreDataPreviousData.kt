@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -28,16 +28,16 @@ import com.squareup.moshi.JsonClass
  * @param agribalyse 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataPreviousData (
 
-    @Json(name = "grade")
+    @SerialName("grade")
     val grade: kotlin.String? = null,
 
-    @Json(name = "score")
+    @SerialName("score")
     val score: kotlin.Int? = null,
 
-    @Json(name = "agribalyse")
+    @SerialName("agribalyse")
     val agribalyse: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse? = null
 
 ) {

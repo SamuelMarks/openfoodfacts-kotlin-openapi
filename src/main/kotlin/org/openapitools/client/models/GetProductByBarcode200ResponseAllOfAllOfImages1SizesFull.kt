@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * properties of fullsize image **TODO** explain how to compute name 
@@ -26,15 +26,15 @@ import com.squareup.moshi.JsonClass
  * @param w The width of the reduced/full image in pixels.
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfImages1SizesFull (
 
     /* The height of the reduced/full image in pixels.  */
-    @Json(name = "h")
+    @SerialName("h")
     val h: kotlin.Int? = null,
 
     /* The width of the reduced/full image in pixels. */
-    @Json(name = "w")
+    @SerialName("w")
     val w: kotlin.Int? = null
 
 ) {

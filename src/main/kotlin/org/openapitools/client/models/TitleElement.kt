@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The title of a panel.
@@ -32,36 +32,36 @@ import com.squareup.moshi.JsonClass
  * @param iconSize If set to \"small\", the icon should be displayed at a small size. 
  */
 
-
+@Serializable
 data class TitleElement (
 
     /* A short name of this panel, not including any actual values */
-    @Json(name = "name")
+    @SerialName("name")
     val name: kotlin.String? = null,
 
-    @Json(name = "title")
+    @SerialName("title")
     val title: kotlin.String? = null,
 
     /* Used to indicate how the value of this item is measured, such as \"grade\" for Nutri-Score and Eco-Score or \"percentage\" for Salt */
-    @Json(name = "type")
+    @SerialName("type")
     val type: TitleElement.Type? = null,
 
     /* The value for this panel where it corresponds to a A to E grade such as the Nutri-Score of the Eco-Score. */
-    @Json(name = "grade")
+    @SerialName("grade")
     val grade: TitleElement.Grade? = null,
 
     /* The numeric value of the panel, where the type is \"percentage\" */
-    @Json(name = "value")
-    val `value`: java.math.BigDecimal? = null,
+    @SerialName("value")
+    val `value`: Double? = null,
 
-    @Json(name = "icon_url")
+    @SerialName("icon_url")
     val iconUrl: kotlin.String? = null,
 
-    @Json(name = "icon_color_from_evaluation")
+    @SerialName("icon_color_from_evaluation")
     val iconColorFromEvaluation: kotlin.String? = null,
 
     /* If set to \"small\", the icon should be displayed at a small size.  */
-    @Json(name = "icon_size")
+    @SerialName("icon_size")
     val iconSize: kotlin.String? = null
 
 ) {
@@ -71,24 +71,24 @@ data class TitleElement (
      *
      * Values: grade,percentage
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Type(val value: kotlin.String) {
-        @Json(name = "grade") grade("grade"),
-        @Json(name = "percentage") percentage("percentage");
+        @SerialName("grade") grade("grade"),
+        @SerialName("percentage") percentage("percentage");
     }
     /**
      * The value for this panel where it corresponds to a A to E grade such as the Nutri-Score of the Eco-Score.
      *
      * Values: a,b,c,d,e,unknown
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Grade(val value: kotlin.String) {
-        @Json(name = "a") a("a"),
-        @Json(name = "b") b("b"),
-        @Json(name = "c") c("c"),
-        @Json(name = "d") d("d"),
-        @Json(name = "e") e("e"),
-        @Json(name = "unknown") unknown("unknown");
+        @SerialName("a") a("a"),
+        @SerialName("b") b("b"),
+        @SerialName("c") c("c"),
+        @SerialName("d") d("d"),
+        @SerialName("e") e("e"),
+        @SerialName("unknown") unknown("unknown");
     }
 
 }

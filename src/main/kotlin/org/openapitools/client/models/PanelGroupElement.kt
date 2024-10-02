@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The panel group element is used to display an optional title followed by a number of sub-panels.
@@ -26,14 +26,14 @@ import com.squareup.moshi.JsonClass
  * @param panelIds The ids of the panels to include. The ids are the keys of the panels in the panels object returned in the knowledge_panels field.
  */
 
-
+@Serializable
 data class PanelGroupElement (
 
-    @Json(name = "title")
+    @SerialName("title")
     val title: kotlin.String? = null,
 
     /* The ids of the panels to include. The ids are the keys of the panels in the panels object returned in the knowledge_panels field. */
-    @Json(name = "panel_ids")
+    @SerialName("panel_ids")
     val panelIds: kotlin.collections.List<kotlin.String>? = null
 
 ) {

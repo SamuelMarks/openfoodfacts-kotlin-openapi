@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -29,22 +29,22 @@ import com.squareup.moshi.JsonClass
  * @param lcDescription 
  */
 
-
+@Serializable
 data class WarningOrErrorMessageImpact (
 
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
-    @Json(name = "name")
+    @SerialName("name")
     val name: kotlin.String? = null,
 
-    @Json(name = "lc_name")
+    @SerialName("lc_name")
     val lcName: kotlin.String? = null,
 
-    @Json(name = "description")
+    @SerialName("description")
     val description: kotlin.String? = null,
 
-    @Json(name = "lc_description")
+    @SerialName("lc_description")
     val lcDescription: kotlin.String? = null
 
 ) {

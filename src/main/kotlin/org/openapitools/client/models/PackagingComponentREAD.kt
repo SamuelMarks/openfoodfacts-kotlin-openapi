@@ -15,12 +15,12 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.PackagingComponentMaterial
-import org.openapitools.client.models.PackagingComponentRecyclingInstruction
-import org.openapitools.client.models.PackagingComponentShape
+import dev.upvote.api.models.PackagingComponentMaterial
+import dev.upvote.api.models.PackagingComponentRecyclingInstruction
+import dev.upvote.api.models.PackagingComponentShape
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Each packaging component has different properties to specify how many there are, its shape, material etc.  The shape, material and recycling properties are mapped to one entry in the packaging_shapes, packaging_materials and packaging_recycling taxonomies, and the value of the property is the canonical name of the taxonomy entry (e.g. en:bottle).  They may contain values that could not yet get matched to their respective taxonomy, in which case they will contain a free text value prefixed with the language code of this text value (e.g. \"fr:Bouteille sphérique\" might have been entered by a French user to indicate it is a spherical bottle).
@@ -39,52 +39,52 @@ import com.squareup.moshi.JsonClass
  * @param weightSourceId Indicates which field was used to populate the \"weight\" field. Either \"specified\", \"measured\", or \"estimated\"
  */
 
-
+@Serializable
 data class PackagingComponentREAD (
 
     /* umber of units of this packaging component contained in the product (e.g. 6 for a pack of 6 bottles) */
-    @Json(name = "number_of_units")
+    @SerialName("number_of_units")
     val numberOfUnits: kotlin.Int? = null,
 
-    @Json(name = "shape")
+    @SerialName("shape")
     val shape: PackagingComponentShape? = null,
 
-    @Json(name = "material")
+    @SerialName("material")
     val material: PackagingComponentMaterial? = null,
 
-    @Json(name = "recycling")
+    @SerialName("recycling")
     val recycling: PackagingComponentRecyclingInstruction? = null,
 
     /* Quantity (weight or volume) of food product contained in the packaging component. (e.g. 75cl for a wine bottle) */
-    @Json(name = "quantity_per_unit")
+    @SerialName("quantity_per_unit")
     val quantityPerUnit: kotlin.String? = null,
 
     /* Value parsed from the quantity field. */
-    @Json(name = "quantity_per_unit_value")
-    val quantityPerUnitValue: java.math.BigDecimal? = null,
+    @SerialName("quantity_per_unit_value")
+    val quantityPerUnitValue: Double? = null,
 
     /* Unit parsed and normalized from the quantity field. */
-    @Json(name = "quantity_per_unit_unit")
+    @SerialName("quantity_per_unit_unit")
     val quantityPerUnitUnit: kotlin.String? = null,
 
     /* Weight (as specified by the manufacturer) of one unit of the empty packaging component (in grams). (e.g. for a 6 pack of 1.5l water bottles, it might be 30, the weight in grams of 1 empty water bottle without its cap which is a different packaging component). */
-    @Json(name = "weight_specified")
-    val weightSpecified: java.math.BigDecimal? = null,
+    @SerialName("weight_specified")
+    val weightSpecified: Double? = null,
 
     /* Weight (as measured by one or more users) of one unit of the empty packaging component (in grams). (e.g. for a 6 pack of 1.5l water bottles, it might be 30, the weight in grams of 1 empty water bottle without its cap which is a different packaging component). */
-    @Json(name = "weight_measured")
-    val weightMeasured: java.math.BigDecimal? = null,
+    @SerialName("weight_measured")
+    val weightMeasured: Double? = null,
 
     /* Weight (as estimated from similar products) of one unit of the empty packaging component (in grams). (e.g. for a 6 pack of 1.5l water bottles, it might be 30, the weight in grams of 1 empty water bottle without its cap which is a different packaging component). */
-    @Json(name = "weight_estimated")
-    val weightEstimated: java.math.BigDecimal? = null,
+    @SerialName("weight_estimated")
+    val weightEstimated: Double? = null,
 
     /* Weight of one unit of the empty packaging component. */
-    @Json(name = "weight")
-    val weight: java.math.BigDecimal? = null,
+    @SerialName("weight")
+    val weight: Double? = null,
 
     /* Indicates which field was used to populate the \"weight\" field. Either \"specified\", \"measured\", or \"estimated\" */
-    @Json(name = "weight_source_id")
+    @SerialName("weight_source_id")
     val weightSourceId: kotlin.String? = null
 
 ) {

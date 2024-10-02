@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -45,71 +45,71 @@ import com.squareup.moshi.JsonClass
  * @param version 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse (
 
-    @Json(name = "agribalyse_food_code")
+    @SerialName("agribalyse_food_code")
     val agribalyseFoodCode: kotlin.String? = null,
 
-    @Json(name = "co2_agriculture")
-    val co2Agriculture: java.math.BigDecimal? = null,
+    @SerialName("co2_agriculture")
+    val co2Agriculture: Double? = null,
 
-    @Json(name = "co2_consumption")
+    @SerialName("co2_consumption")
     val co2Consumption: kotlin.Int? = null,
 
-    @Json(name = "co2_distribution")
-    val co2Distribution: java.math.BigDecimal? = null,
+    @SerialName("co2_distribution")
+    val co2Distribution: Double? = null,
 
-    @Json(name = "co2_packaging")
-    val co2Packaging: java.math.BigDecimal? = null,
+    @SerialName("co2_packaging")
+    val co2Packaging: Double? = null,
 
-    @Json(name = "co2_processing")
-    val co2Processing: java.math.BigDecimal? = null,
+    @SerialName("co2_processing")
+    val co2Processing: Double? = null,
 
-    @Json(name = "co2_total")
-    val co2Total: java.math.BigDecimal? = null,
+    @SerialName("co2_total")
+    val co2Total: Double? = null,
 
-    @Json(name = "co2_transportation")
-    val co2Transportation: java.math.BigDecimal? = null,
+    @SerialName("co2_transportation")
+    val co2Transportation: Double? = null,
 
-    @Json(name = "code")
+    @SerialName("code")
     val code: kotlin.String? = null,
 
-    @Json(name = "dqr")
+    @SerialName("dqr")
     val dqr: kotlin.String? = null,
 
-    @Json(name = "ef_agriculture")
-    val efAgriculture: java.math.BigDecimal? = null,
+    @SerialName("ef_agriculture")
+    val efAgriculture: Double? = null,
 
-    @Json(name = "ef_consumption")
+    @SerialName("ef_consumption")
     val efConsumption: kotlin.Int? = null,
 
-    @Json(name = "ef_distribution")
-    val efDistribution: java.math.BigDecimal? = null,
+    @SerialName("ef_distribution")
+    val efDistribution: Double? = null,
 
-    @Json(name = "ef_packaging")
-    val efPackaging: java.math.BigDecimal? = null,
+    @SerialName("ef_packaging")
+    val efPackaging: Double? = null,
 
-    @Json(name = "ef_processing")
-    val efProcessing: java.math.BigDecimal? = null,
+    @SerialName("ef_processing")
+    val efProcessing: Double? = null,
 
-    @Json(name = "ef_total")
-    val efTotal: java.math.BigDecimal? = null,
+    @SerialName("ef_total")
+    val efTotal: Double? = null,
 
-    @Json(name = "ef_transportation")
-    val efTransportation: java.math.BigDecimal? = null,
+    @SerialName("ef_transportation")
+    val efTransportation: Double? = null,
 
-    @Json(name = "is_beverage")
+    @SerialName("is_beverage")
     val isBeverage: kotlin.Int? = null,
 
     /* This can be returned in many other languages like name_fr (for french).  */
-    @Json(name = "name_en")
+    @SerialName("name_en")
     val nameEn: kotlin.String? = null,
 
-    @Json(name = "score")
+    @SerialName("score")
     val score: kotlin.Int? = null,
 
-    @Json(name = "version")
+    @SerialName("version")
     val version: kotlin.String? = null
 
 ) {

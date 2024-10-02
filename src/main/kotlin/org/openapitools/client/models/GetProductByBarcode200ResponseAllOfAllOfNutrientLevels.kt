@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Traffic light indicators on main nutrients levels 
@@ -28,19 +28,19 @@ import com.squareup.moshi.JsonClass
  * @param sugars 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfNutrientLevels (
 
-    @Json(name = "fat")
+    @SerialName("fat")
     val fat: GetProductByBarcode200ResponseAllOfAllOfNutrientLevels.Fat? = null,
 
-    @Json(name = "salt")
+    @SerialName("salt")
     val salt: GetProductByBarcode200ResponseAllOfAllOfNutrientLevels.Salt? = null,
 
-    @Json(name = "saturated-fat")
+    @SerialName("saturated-fat")
     val saturatedFat: GetProductByBarcode200ResponseAllOfAllOfNutrientLevels.SaturatedFat? = null,
 
-    @Json(name = "sugars")
+    @SerialName("sugars")
     val sugars: GetProductByBarcode200ResponseAllOfAllOfNutrientLevels.Sugars? = null
 
 ) {
@@ -50,44 +50,44 @@ data class GetProductByBarcode200ResponseAllOfAllOfNutrientLevels (
      *
      * Values: low,moderate,high
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Fat(val value: kotlin.String) {
-        @Json(name = "low") low("low"),
-        @Json(name = "moderate") moderate("moderate"),
-        @Json(name = "high") high("high");
+        @SerialName("low") low("low"),
+        @SerialName("moderate") moderate("moderate"),
+        @SerialName("high") high("high");
     }
     /**
      * 
      *
      * Values: low,moderate,high
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Salt(val value: kotlin.String) {
-        @Json(name = "low") low("low"),
-        @Json(name = "moderate") moderate("moderate"),
-        @Json(name = "high") high("high");
+        @SerialName("low") low("low"),
+        @SerialName("moderate") moderate("moderate"),
+        @SerialName("high") high("high");
     }
     /**
      * 
      *
      * Values: low,moderate,high
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class SaturatedFat(val value: kotlin.String) {
-        @Json(name = "low") low("low"),
-        @Json(name = "moderate") moderate("moderate"),
-        @Json(name = "high") high("high");
+        @SerialName("low") low("low"),
+        @SerialName("moderate") moderate("moderate"),
+        @SerialName("high") high("high");
     }
     /**
      * 
      *
      * Values: low,moderate,high
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Sugars(val value: kotlin.String) {
-        @Json(name = "low") low("low"),
-        @Json(name = "moderate") moderate("moderate"),
-        @Json(name = "high") high("high");
+        @SerialName("low") low("low"),
+        @SerialName("moderate") moderate("moderate"),
+        @SerialName("high") high("high");
     }
 
 }

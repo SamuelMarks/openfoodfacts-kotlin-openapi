@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * All known nutrients for the product.  Note that each nutrients are declined with a variety of suffixes like `_100g`, `_serving`, see patternProperties below.  A specific `_unit` is the unit used to measure the nutrient.  Beware that some properties are to be interpreted based upon `nutrition_data_per` value.  Also for products that have a nutrition table for prepared product (eg. the nutrition facts for a bowl of milk with cocoa powder), a `_prepared` suffix is added (before other suffixes).  You can get all possible nutrients from the [nutrients taxonomy](https://static.openfoodfacts.org/data/taxonomies/nutrients.json)  **FIXME** add more nutrients with description. 
@@ -44,77 +44,77 @@ import com.squareup.moshi.JsonClass
  * @param erythritol erythritol is a polyol which is not providing any energy. As such, it needs not be taken into account when computing the energy of a product. Eryhtritol is now displayed on nutrition facts sheet of some products, mainly in the USA. This value is entered either by contributors, either by imports. 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfNutriments (
 
     /* Quantity of alcohol  (per 100g or per serving) in a standard unit (g or ml)  */
-    @Json(name = "alcohol")
-    val alcohol: java.math.BigDecimal? = null,
+    @SerialName("alcohol")
+    val alcohol: Double? = null,
 
-    @Json(name = "carbohydrates")
-    val carbohydrates: java.math.BigDecimal? = null,
+    @SerialName("carbohydrates")
+    val carbohydrates: Double? = null,
 
     /* It is the same as `energy-kj` if we have it, or computed from `energy-kcal` otherwise  (per 100g or per serving) in kj  */
-    @Json(name = "energy")
-    val energy: java.math.BigDecimal? = null,
+    @SerialName("energy")
+    val energy: Double? = null,
 
     /* energy_value will be equal to energy-kj_value if we have it or to energy-kcal_value otherwise  */
-    @Json(name = "energy_value")
-    val energyValue: java.math.BigDecimal? = null,
+    @SerialName("energy_value")
+    val energyValue: Double? = null,
 
     /* Equal to energy-kj_unit if we have it or to energy-kcal_unit otherwise  */
-    @Json(name = "energy_unit")
+    @SerialName("energy_unit")
     val energyUnit: GetProductByBarcode200ResponseAllOfAllOfNutriments.EnergyUnit? = null,
 
     /* energy in kcal, if it is specified  (per 100g or per serving) in a standard unit (g or ml)  */
-    @Json(name = "energy-kcal")
-    val energyKcal: java.math.BigDecimal? = null,
+    @SerialName("energy-kcal")
+    val energyKcal: Double? = null,
 
     /* energy in kj, if it is specified  (per 100g or per serving) in a standard unit (g or ml)  */
-    @Json(name = "energy-kj")
-    val energyKj: java.math.BigDecimal? = null,
+    @SerialName("energy-kj")
+    val energyKj: Double? = null,
 
-    @Json(name = "fat")
-    val fat: java.math.BigDecimal? = null,
+    @SerialName("fat")
+    val fat: Double? = null,
 
     /* An estimate, from the ingredients list of the percentage of fruits, vegetable and legumes. This is an important information for Nutri-Score (2023 version) computation.  */
-    @Json(name = "fruits-vegetables-legumes-estimate-from-ingredients")
-    val fruitsVegetablesLegumesEstimateFromIngredients: java.math.BigDecimal? = null,
+    @SerialName("fruits-vegetables-legumes-estimate-from-ingredients")
+    val fruitsVegetablesLegumesEstimateFromIngredients: Double? = null,
 
     /* An estimate, from the ingredients list of the percentage of fruits, vegetable and nuts. This is an important information for Nutri-Score (2021 version) computation.  */
-    @Json(name = "fruits-vegetables-nuts-estimate-from-ingredients")
-    val fruitsVegetablesNutsEstimateFromIngredients: java.math.BigDecimal? = null,
+    @SerialName("fruits-vegetables-nuts-estimate-from-ingredients")
+    val fruitsVegetablesNutsEstimateFromIngredients: Double? = null,
 
-    @Json(name = "nova-group")
+    @SerialName("nova-group")
     val novaGroup: kotlin.Int? = null,
 
-    @Json(name = "nutrition-score-fr")
+    @SerialName("nutrition-score-fr")
     val nutritionScoreFr: kotlin.Any? = null,
 
-    @Json(name = "proteins")
-    val proteins: java.math.BigDecimal? = null,
+    @SerialName("proteins")
+    val proteins: Double? = null,
 
-    @Json(name = "salt")
-    val salt: java.math.BigDecimal? = null,
+    @SerialName("salt")
+    val salt: Double? = null,
 
-    @Json(name = "saturated-fat")
-    val saturatedFat: java.math.BigDecimal? = null,
+    @SerialName("saturated-fat")
+    val saturatedFat: Double? = null,
 
-    @Json(name = "sodium")
-    val sodium: java.math.BigDecimal? = null,
+    @SerialName("sodium")
+    val sodium: Double? = null,
 
-    @Json(name = "sugars")
-    val sugars: java.math.BigDecimal? = null,
+    @SerialName("sugars")
+    val sugars: Double? = null,
 
-    @Json(name = "carbon-footprint-from-known-ingredients_product")
+    @SerialName("carbon-footprint-from-known-ingredients_product")
     val carbonFootprintFromKnownIngredientsProduct: kotlin.Int? = null,
 
-    @Json(name = "carbon-footprint-from-known-ingredients_serving")
-    val carbonFootprintFromKnownIngredientsServing: java.math.BigDecimal? = null,
+    @SerialName("carbon-footprint-from-known-ingredients_serving")
+    val carbonFootprintFromKnownIngredientsServing: Double? = null,
 
     /* erythritol is a polyol which is not providing any energy. As such, it needs not be taken into account when computing the energy of a product. Eryhtritol is now displayed on nutrition facts sheet of some products, mainly in the USA. This value is entered either by contributors, either by imports.  */
-    @Json(name = "erythritol")
-    val erythritol: java.math.BigDecimal? = null
+    @SerialName("erythritol")
+    val erythritol: Double? = null
 
 ) {
 
@@ -123,10 +123,10 @@ data class GetProductByBarcode200ResponseAllOfAllOfNutriments (
      *
      * Values: kcal,kj
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class EnergyUnit(val value: kotlin.String) {
-        @Json(name = "kcal") kcal("kcal"),
-        @Json(name = "kj") kj("kj");
+        @SerialName("kcal") kcal("kcal"),
+        @SerialName("kj") kj("kj");
     }
 
 }

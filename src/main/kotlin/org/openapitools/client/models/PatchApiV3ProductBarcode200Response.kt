@@ -15,12 +15,12 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.PatchApiV3ProductBarcode200ResponseAllOfProduct
-import org.openapitools.client.models.ResponseStatusResult
-import org.openapitools.client.models.WarningOrErrorMessage
+import dev.upvote.api.models.PatchApiV3ProductBarcode200ResponseAllOfProduct
+import dev.upvote.api.models.ResponseStatusResult
+import dev.upvote.api.models.WarningOrErrorMessage
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -32,25 +32,25 @@ import com.squareup.moshi.JsonClass
  * @param product 
  */
 
-
+@Serializable
 data class PatchApiV3ProductBarcode200Response (
 
     /* Overall status of the request: whether it failed or succeeded, with or without warnings or errors. */
-    @Json(name = "status_id")
+    @SerialName("status_id")
     val statusId: PatchApiV3ProductBarcode200Response.StatusId? = null,
 
-    @Json(name = "result")
+    @SerialName("result")
     val result: ResponseStatusResult? = null,
 
     /* List of warnings. Warnings are used to alert about something that may be wrong, but is not necessarily wrong (e.g. a nutrient value that is unexpectedly high). */
-    @Json(name = "warnings")
+    @SerialName("warnings")
     val warnings: kotlin.collections.List<WarningOrErrorMessage>? = null,
 
     /* List of errors. Errors are used to alert about something that is definitely wrong (e.g. a nutrient value thaty is impossibly high). */
-    @Json(name = "errors")
+    @SerialName("errors")
     val errors: kotlin.collections.List<WarningOrErrorMessage>? = null,
 
-    @Json(name = "product")
+    @SerialName("product")
     val product: PatchApiV3ProductBarcode200ResponseAllOfProduct? = null
 
 ) {
@@ -60,12 +60,12 @@ data class PatchApiV3ProductBarcode200Response (
      *
      * Values: success,success_with_warnings,success_with_errors,failure
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class StatusId(val value: kotlin.String) {
-        @Json(name = "success") success("success"),
-        @Json(name = "success_with_warnings") success_with_warnings("success_with_warnings"),
-        @Json(name = "success_with_errors") success_with_errors("success_with_errors"),
-        @Json(name = "failure") failure("failure");
+        @SerialName("success") success("success"),
+        @SerialName("success_with_warnings") success_with_warnings("success_with_warnings"),
+        @SerialName("success_with_errors") success_with_errors("success_with_errors"),
+        @SerialName("failure") failure("failure");
     }
 
 }

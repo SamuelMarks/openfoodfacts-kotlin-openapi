@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -28,23 +28,23 @@ import com.squareup.moshi.JsonClass
  * @param rev Revision number to revert to
  */
 
-
+@Serializable
 data class PostApiV3ProductRevertRequest (
 
     /* Comma separated list of fields requested in the response. Special values: \"updated\": returns field that were updated by the query (e.g. sending \"packagings\" or \"packagings_add\" would return \"packagings\"), \"none\": returns no fields, \"all\": returns all fields except generated fields that need to be explicitly requested such as \"knowledge_panels\". Defaults to \"updated\" for WRITE requests, and \"all\" for READ requests. */
-    @Json(name = "fields")
+    @SerialName("fields")
     val fields: kotlin.String? = null,
 
     /* 2 letter language code to request names of tags in a specific language.  For READ requets: if passed, all taxonomized tags of the response will include a lc_name property with the translation in the requested language, if available. Otherwise, the property value will contain the name in the original language, prefixed by the 2 language code and a colon.  For WRITE requests: if passed, taxonomized tags fields with a lc_name property will be considered to be in this language. */
-    @Json(name = "tags_lc")
+    @SerialName("tags_lc")
     val tagsLc: kotlin.String? = null,
 
     /* Barcode of the product */
-    @Json(name = "code")
+    @SerialName("code")
     val code: kotlin.String? = null,
 
     /* Revision number to revert to */
-    @Json(name = "rev")
+    @SerialName("rev")
     val rev: kotlin.Int? = null
 
 ) {

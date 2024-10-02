@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -27,16 +27,16 @@ import com.squareup.moshi.JsonClass
  * @param enColonVegetarianStatusUnknown 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfIngredientsAnalysis (
 
-    @Json(name = "en:palm-oil")
+    @SerialName("en:palm-oil")
     val enColonPalmOil: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "en:vegan-status-unknown")
+    @SerialName("en:vegan-status-unknown")
     val enColonVeganStatusUnknown: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "en:vegetarian-status-unknown")
+    @SerialName("en:vegetarian-status-unknown")
     val enColonVegetarianStatusUnknown: kotlin.collections.List<kotlin.String>? = null
 
 ) {

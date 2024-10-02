@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -29,27 +29,27 @@ import com.squareup.moshi.JsonClass
  * @param lcDescription Description of the problem specific to the request, in the language specified in tags_lc, if supplied.
  */
 
-
+@Serializable
 data class WarningOrErrorMessageMessage (
 
     /* Identifier of a response message.  */
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
     /* Name of the response message entry in English. */
-    @Json(name = "name")
+    @SerialName("name")
     val name: kotlin.String? = null,
 
     /* Name of the response message entry in the language specified in tags_lc, if supplied. */
-    @Json(name = "lc_name")
+    @SerialName("lc_name")
     val lcName: kotlin.String? = null,
 
     /* Description of the problem specific to the request, in English. */
-    @Json(name = "description")
+    @SerialName("description")
     val description: kotlin.String? = null,
 
     /* Description of the problem specific to the request, in the language specified in tags_lc, if supplied. */
-    @Json(name = "lc_description")
+    @SerialName("lc_description")
     val lcDescription: kotlin.String? = null
 
 ) {

@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.Panel
+import dev.upvote.api.models.Panel
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Knowledge panels for the tag
@@ -26,10 +26,10 @@ import com.squareup.moshi.JsonClass
  * @param additionalProperties 
  */
 
-
+@Serializable
 data class Panels1 (
 
-    @Json(name = "additionalProperties")
+    @SerialName("additionalProperties")
     val additionalProperties: Panel? = null
 
 ) {

@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Overall result  of the request (e.g. a product has been created)
@@ -27,19 +27,19 @@ import com.squareup.moshi.JsonClass
  * @param lcName Name of the response result entry in the language specified in tags_lc, if supplied.
  */
 
-
+@Serializable
 data class ResponseStatusResult (
 
     /* Identifier of a response result entry */
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
     /* Name of the response result entry in English. */
-    @Json(name = "name")
+    @SerialName("name")
     val name: kotlin.String? = null,
 
     /* Name of the response result entry in the language specified in tags_lc, if supplied. */
-    @Json(name = "lc_name")
+    @SerialName("lc_name")
     val lcName: kotlin.String? = null
 
 ) {

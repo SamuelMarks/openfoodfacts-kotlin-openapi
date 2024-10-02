@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Detail of data the Nutri-Score was computed upon.  **Note**: this might not be stable, don't rely too much on this, or, at least, tell us !  **TODO** document each property 
@@ -56,104 +56,104 @@ import com.squareup.moshi.JsonClass
  * @param sugarsValue 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfNutriscoreData (
 
-    @Json(name = "energy")
+    @SerialName("energy")
     val energy: kotlin.Int? = null,
 
-    @Json(name = "energy_points")
+    @SerialName("energy_points")
     val energyPoints: kotlin.Int? = null,
 
-    @Json(name = "energy_value")
+    @SerialName("energy_value")
     val energyValue: kotlin.Int? = null,
 
-    @Json(name = "fiber")
+    @SerialName("fiber")
     val fiber: kotlin.Int? = null,
 
-    @Json(name = "fiber_points")
+    @SerialName("fiber_points")
     val fiberPoints: kotlin.Int? = null,
 
-    @Json(name = "fiber_value")
+    @SerialName("fiber_value")
     val fiberValue: kotlin.Int? = null,
 
-    @Json(name = "fruits_vegetables_nuts_colza_walnut_olive_oils")
+    @SerialName("fruits_vegetables_nuts_colza_walnut_olive_oils")
     val fruitsVegetablesNutsColzaWalnutOliveOils: kotlin.Int? = null,
 
-    @Json(name = "fruits_vegetables_nuts_colza_walnut_olive_oils_points")
+    @SerialName("fruits_vegetables_nuts_colza_walnut_olive_oils_points")
     val fruitsVegetablesNutsColzaWalnutOliveOilsPoints: kotlin.Int? = null,
 
-    @Json(name = "fruits_vegetables_nuts_colza_walnut_olive_oils_value")
+    @SerialName("fruits_vegetables_nuts_colza_walnut_olive_oils_value")
     val fruitsVegetablesNutsColzaWalnutOliveOilsValue: kotlin.Int? = null,
 
-    @Json(name = "grade")
+    @SerialName("grade")
     val grade: kotlin.String? = null,
 
-    @Json(name = "is_beverage")
+    @SerialName("is_beverage")
     val isBeverage: kotlin.Int? = null,
 
-    @Json(name = "is_cheese")
+    @SerialName("is_cheese")
     val isCheese: kotlin.Int? = null,
 
-    @Json(name = "is_fat")
+    @SerialName("is_fat")
     val isFat: kotlin.Int? = null,
 
-    @Json(name = "is_water")
+    @SerialName("is_water")
     val isWater: kotlin.Int? = null,
 
-    @Json(name = "negative_points")
+    @SerialName("negative_points")
     val negativePoints: kotlin.Int? = null,
 
-    @Json(name = "positive_points")
+    @SerialName("positive_points")
     val positivePoints: kotlin.Int? = null,
 
-    @Json(name = "proteins")
-    val proteins: java.math.BigDecimal? = null,
+    @SerialName("proteins")
+    val proteins: Double? = null,
 
-    @Json(name = "proteins_points")
+    @SerialName("proteins_points")
     val proteinsPoints: kotlin.Int? = null,
 
-    @Json(name = "proteins_value")
-    val proteinsValue: java.math.BigDecimal? = null,
+    @SerialName("proteins_value")
+    val proteinsValue: Double? = null,
 
-    @Json(name = "saturated_fat")
-    val saturatedFat: java.math.BigDecimal? = null,
+    @SerialName("saturated_fat")
+    val saturatedFat: Double? = null,
 
-    @Json(name = "saturated_fat_points")
+    @SerialName("saturated_fat_points")
     val saturatedFatPoints: kotlin.Int? = null,
 
-    @Json(name = "saturated_fat_ratio")
-    val saturatedFatRatio: java.math.BigDecimal? = null,
+    @SerialName("saturated_fat_ratio")
+    val saturatedFatRatio: Double? = null,
 
-    @Json(name = "saturated_fat_ratio_points")
+    @SerialName("saturated_fat_ratio_points")
     val saturatedFatRatioPoints: kotlin.Int? = null,
 
-    @Json(name = "saturated_fat_ratio_value")
-    val saturatedFatRatioValue: java.math.BigDecimal? = null,
+    @SerialName("saturated_fat_ratio_value")
+    val saturatedFatRatioValue: Double? = null,
 
-    @Json(name = "saturated_fat_value")
-    val saturatedFatValue: java.math.BigDecimal? = null,
+    @SerialName("saturated_fat_value")
+    val saturatedFatValue: Double? = null,
 
-    @Json(name = "score")
+    @SerialName("score")
     val score: kotlin.Int? = null,
 
-    @Json(name = "sodium")
-    val sodium: java.math.BigDecimal? = null,
+    @SerialName("sodium")
+    val sodium: Double? = null,
 
-    @Json(name = "sodium_points")
+    @SerialName("sodium_points")
     val sodiumPoints: kotlin.Int? = null,
 
-    @Json(name = "sodium_value")
-    val sodiumValue: java.math.BigDecimal? = null,
+    @SerialName("sodium_value")
+    val sodiumValue: Double? = null,
 
-    @Json(name = "sugars")
-    val sugars: java.math.BigDecimal? = null,
+    @SerialName("sugars")
+    val sugars: Double? = null,
 
-    @Json(name = "sugars_points")
+    @SerialName("sugars_points")
     val sugarsPoints: kotlin.Int? = null,
 
-    @Json(name = "sugars_value")
-    val sugarsValue: java.math.BigDecimal? = null
+    @SerialName("sugars_value")
+    val sugarsValue: Double? = null
 
 ) {
 

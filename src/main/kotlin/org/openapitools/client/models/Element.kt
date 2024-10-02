@@ -15,14 +15,14 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.ImageElement
-import org.openapitools.client.models.PanelElement
-import org.openapitools.client.models.PanelGroupElement
-import org.openapitools.client.models.TableElement
-import org.openapitools.client.models.TextElement
+import dev.upvote.api.models.ImageElement
+import dev.upvote.api.models.PanelElement
+import dev.upvote.api.models.PanelGroupElement
+import dev.upvote.api.models.TableElement
+import dev.upvote.api.models.TextElement
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Each element object contains one specific element object such as a text element or an image element. 
@@ -36,29 +36,29 @@ import com.squareup.moshi.JsonClass
  * @param tableElement 
  */
 
-
+@Serializable
 data class Element (
 
     /* The type of the included element object. The type also indicates which field contains the included element object. e.g. if the type is \"text\", the included element object will be in the \"text_element\" field.  Note that in the future, new type of element may be added, so your code should ignore unrecognized types, and unknown properties.  TODO: add Map type  */
-    @Json(name = "type")
+    @SerialName("type")
     val type: Element.Type,
 
-    @Json(name = "text_element")
+    @SerialName("text_element")
     val textElement: TextElement? = null,
 
-    @Json(name = "image_element")
+    @SerialName("image_element")
     val imageElement: ImageElement? = null,
 
-    @Json(name = "action_element")
+    @SerialName("action_element")
     val actionElement: kotlin.String? = null,
 
-    @Json(name = "panel_element")
+    @SerialName("panel_element")
     val panelElement: PanelElement? = null,
 
-    @Json(name = "panel_group_element")
+    @SerialName("panel_group_element")
     val panelGroupElement: PanelGroupElement? = null,
 
-    @Json(name = "table_element")
+    @SerialName("table_element")
     val tableElement: TableElement? = null
 
 ) {
@@ -68,14 +68,14 @@ data class Element (
      *
      * Values: text,image,action,panel,panel_group,table
      */
-    @JsonClass(generateAdapter = false)
+    // @JsonClass(generateAdapter = false)
     enum class Type(val value: kotlin.String) {
-        @Json(name = "text") text("text"),
-        @Json(name = "image") image("image"),
-        @Json(name = "action") action("action"),
-        @Json(name = "panel") panel("panel"),
-        @Json(name = "panel_group") panel_group("panel_group"),
-        @Json(name = "table") table("table");
+        @SerialName("text") text("text"),
+        @SerialName("image") image("image"),
+        @SerialName("action") action("action"),
+        @SerialName("panel") panel("panel"),
+        @SerialName("panel_group") panel_group("panel_group"),
+        @SerialName("table") table("table");
     }
 
 }

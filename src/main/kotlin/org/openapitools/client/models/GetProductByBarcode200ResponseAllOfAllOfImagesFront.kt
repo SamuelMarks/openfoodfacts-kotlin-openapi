@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImagesFrontSizes
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImagesFrontSizes
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * This represents an image (or part of it) selected for a specific role on this product. 
@@ -37,47 +37,47 @@ import com.squareup.moshi.JsonClass
  * @param y2 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfImagesFront (
 
     /* The angle of the image rotation (if it was rotated). */
-    @Json(name = "angle")
+    @SerialName("angle")
     val angle: kotlin.Int? = null,
 
-    @Json(name = "coordinates_image_size")
+    @SerialName("coordinates_image_size")
     val coordinatesImageSize: kotlin.String? = null,
 
-    @Json(name = "geometry")
+    @SerialName("geometry")
     val geometry: kotlin.String? = null,
 
     /* The id of the original/source image that was selected to edit(rotate, normalize etc) to produce this new image. */
-    @Json(name = "imgid")
+    @SerialName("imgid")
     val imgid: kotlin.String? = null,
 
     /* Normalize colors. */
-    @Json(name = "normalize")
+    @SerialName("normalize")
     val normalize: kotlin.Any? = null,
 
-    @Json(name = "rev")
+    @SerialName("rev")
     val rev: kotlin.String? = null,
 
-    @Json(name = "sizes")
+    @SerialName("sizes")
     val sizes: GetProductByBarcode200ResponseAllOfAllOfImagesFrontSizes? = null,
 
     /* Photo on white background : Try to remove the background.  */
-    @Json(name = "white_magic")
+    @SerialName("white_magic")
     val whiteMagic: kotlin.Any? = null,
 
-    @Json(name = "x1")
+    @SerialName("x1")
     val x1: kotlin.String? = null,
 
-    @Json(name = "x2")
+    @SerialName("x2")
     val x2: kotlin.String? = null,
 
-    @Json(name = "y1")
+    @SerialName("y1")
     val y1: kotlin.String? = null,
 
-    @Json(name = "y2")
+    @SerialName("y2")
     val y2: kotlin.String? = null
 
 ) {

@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSourcesFieldsOrgGs1
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSourcesFieldsOrgGs1
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -26,10 +26,10 @@ import com.squareup.moshi.JsonClass
  * @param orgGs1 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfSourcesFields (
 
-    @Json(name = "org-gs1")
+    @SerialName("org-gs1")
     val orgGs1: GetProductByBarcode200ResponseAllOfAllOfSourcesFieldsOrgGs1? = null
 
 ) {

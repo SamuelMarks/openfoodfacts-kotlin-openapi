@@ -15,10 +15,8 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSourcesInnerManufacturer
-
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -34,34 +32,34 @@ import com.squareup.moshi.JsonClass
  * @param url 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfSourcesInner (
 
-    @Json(name = "fields")
+    @SerialName("fields")
     val fields: kotlin.collections.List<kotlin.String>? = null,
 
-    @Json(name = "id")
+    @SerialName("id")
     val id: kotlin.String? = null,
 
-    @Json(name = "images")
+    @SerialName("images")
     val images: kotlin.collections.List<kotlin.Any>? = null,
 
-    @Json(name = "import_t")
+    @SerialName("import_t")
     val importT: kotlin.Int? = null,
 
-    @Json(name = "manufacturer")
-    val manufacturer: GetProductByBarcode200ResponseAllOfAllOfSourcesInnerManufacturer? = null,
+    @SerialName("manufacturer")
+    val manufacturer: Any? = null,
 
-    @Json(name = "name")
+    @SerialName("name")
     val name: kotlin.String? = null,
 
-    @Json(name = "source_licence")
+    @SerialName("source_licence")
     val sourceLicence: kotlin.String? = null,
 
-    @Json(name = "source_licence_url")
+    @SerialName("source_licence_url")
     val sourceLicenceUrl: kotlin.String? = null,
 
-    @Json(name = "url")
+    @SerialName("url")
     val url: kotlin.String? = null
 
 ) {

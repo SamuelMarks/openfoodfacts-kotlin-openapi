@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.PackagingComponentWRITE
+import dev.upvote.api.models.PackagingComponentWRITE
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Model for creating or updating products using the v3 version of the product update API.
@@ -32,33 +32,33 @@ import com.squareup.moshi.JsonClass
  * @param categoriesTags An array of categories
  */
 
-
+@Serializable
 data class ProductUpdateAPIV3WRITE (
 
     /* The packagings object is an array of individual packaging component objects.  The Packaging data document explains how packaging data is structured in Open Food Facts: https://openfoodfacts.github.io/openfoodfacts-server/dev/explain-packaging-data/ */
-    @Json(name = "packagings")
+    @SerialName("packagings")
     val packagings: kotlin.collections.List<PackagingComponentWRITE>? = null,
 
     /* The packagings object is an array of individual packaging component objects.  The Packaging data document explains how packaging data is structured in Open Food Facts: https://openfoodfacts.github.io/openfoodfacts-server/dev/explain-packaging-data/ */
-    @Json(name = "packagings_add")
+    @SerialName("packagings_add")
     val packagingsAdd: kotlin.collections.List<PackagingComponentWRITE>? = null,
 
     /* Indicate if the packagings array contains all the packaging parts of the product. This field can be set by users when they enter or verify packaging data. Possible values are 0 or 1. */
-    @Json(name = "packagings_complete")
+    @SerialName("packagings_complete")
     val packagingsComplete: kotlin.Int? = null,
 
     /* 2 letter language code of the main language of the product (the most prominent on the packaging) */
-    @Json(name = "lang")
+    @SerialName("lang")
     val lang: kotlin.String? = null,
 
-    @Json(name = "quantity")
+    @SerialName("quantity")
     val quantity: kotlin.String? = null,
 
-    @Json(name = "serving_size")
+    @SerialName("serving_size")
     val servingSize: kotlin.String? = null,
 
     /* An array of categories */
-    @Json(name = "categories_tags")
+    @SerialName("categories_tags")
     val categoriesTags: kotlin.collections.List<kotlin.String>? = null
 
 ) {

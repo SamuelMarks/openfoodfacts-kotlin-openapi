@@ -15,13 +15,13 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustments
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataMissing
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataPreviousData
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustments
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataMissing
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataPreviousData
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * An object about a lot of details about data needed for Eco-Score computation  and complementary data of interest. 
@@ -38,37 +38,37 @@ import com.squareup.moshi.JsonClass
  * @param status 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreData (
 
-    @Json(name = "adjustments")
+    @SerialName("adjustments")
     val adjustments: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustments? = null,
 
-    @Json(name = "agribalyse")
+    @SerialName("agribalyse")
     val agribalyse: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse? = null,
 
-    @Json(name = "grade")
+    @SerialName("grade")
     val grade: kotlin.String? = null,
 
-    @Json(name = "grades")
+    @SerialName("grades")
     val grades: kotlin.Any? = null,
 
-    @Json(name = "missing")
+    @SerialName("missing")
     val missing: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataMissing? = null,
 
-    @Json(name = "missing_data_warning")
+    @SerialName("missing_data_warning")
     val missingDataWarning: kotlin.Int? = null,
 
-    @Json(name = "previous_data")
+    @SerialName("previous_data")
     val previousData: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataPreviousData? = null,
 
-    @Json(name = "score")
+    @SerialName("score")
     val score: kotlin.Int? = null,
 
-    @Json(name = "scores")
+    @SerialName("scores")
     val scores: kotlin.Any? = null,
 
-    @Json(name = "status")
+    @SerialName("status")
     val status: kotlin.String? = null
 
 ) {

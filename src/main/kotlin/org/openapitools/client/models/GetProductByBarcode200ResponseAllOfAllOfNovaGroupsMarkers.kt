@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Detail of ingredients or processing that makes the products having Nova 3 or 4 
@@ -26,15 +26,15 @@ import com.squareup.moshi.JsonClass
  * @param _4 Markers of level 4 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers (
 
     /* Markers of level 3  */
-    @Json(name = "3")
+    @SerialName("3")
     val _3: kotlin.collections.List<kotlin.collections.List<kotlin.String>>? = null,
 
     /* Markers of level 4  */
-    @Json(name = "4")
+    @SerialName("4")
     val _4: kotlin.collections.List<kotlin.collections.List<kotlin.String>>? = null
 
 ) {

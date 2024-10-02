@@ -15,12 +15,12 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.WarningOrErrorMessageField
-import org.openapitools.client.models.WarningOrErrorMessageImpact
-import org.openapitools.client.models.WarningOrErrorMessageMessage
+import dev.upvote.api.models.WarningOrErrorMessageField
+import dev.upvote.api.models.WarningOrErrorMessageImpact
+import dev.upvote.api.models.WarningOrErrorMessageMessage
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Describes a warning or error for a READ or WRITE request, which field triggered it, and what the impact was (e.g. the field was ignored).
@@ -30,16 +30,16 @@ import com.squareup.moshi.JsonClass
  * @param impact 
  */
 
-
+@Serializable
 data class WarningOrErrorMessage (
 
-    @Json(name = "message")
+    @SerialName("message")
     val message: WarningOrErrorMessageMessage? = null,
 
-    @Json(name = "field")
+    @SerialName("field")
     val `field`: WarningOrErrorMessageField? = null,
 
-    @Json(name = "impact")
+    @SerialName("impact")
     val impact: WarningOrErrorMessageImpact? = null
 
 ) {

@@ -16,8 +16,8 @@
 package org.openapitools.client.models
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -28,23 +28,23 @@ import com.squareup.moshi.JsonClass
  * @param altText Alt Text of the image.
  */
 
-
+@Serializable
 data class ImageElement (
 
     /* full URL of the image */
-    @Json(name = "url")
+    @SerialName("url")
     val url: kotlin.String? = null,
 
     /* Width of the image.  This is just a suggestion coming from the server,  the client may choose to use its own dimensions for the image.  */
-    @Json(name = "width")
+    @SerialName("width")
     val width: kotlin.Int? = null,
 
     /* Height of the image.  This is just a suggestion coming from the server, the client may choose to use its own dimensions for the image.  */
-    @Json(name = "height")
+    @SerialName("height")
     val height: kotlin.Int? = null,
 
     /* Alt Text of the image. */
-    @Json(name = "alt_text")
+    @SerialName("alt_text")
     val altText: kotlin.String? = null
 
 ) {

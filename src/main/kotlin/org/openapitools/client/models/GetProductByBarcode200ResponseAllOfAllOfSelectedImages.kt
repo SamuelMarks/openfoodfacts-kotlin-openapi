@@ -15,10 +15,10 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSelectedImagesFront
+import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSelectedImagesFront
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * 
@@ -26,10 +26,10 @@ import com.squareup.moshi.JsonClass
  * @param front 
  */
 
-
+@Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfSelectedImages (
 
-    @Json(name = "front")
+    @SerialName("front")
     val front: GetProductByBarcode200ResponseAllOfAllOfSelectedImagesFront? = null
 
 ) {
