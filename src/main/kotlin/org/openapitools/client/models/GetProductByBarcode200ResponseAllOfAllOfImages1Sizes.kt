@@ -15,7 +15,7 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImages1SizesFull
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImages1SizesFull
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -17,6 +17,7 @@ package org.openapitools.client.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 /**
  * 
@@ -42,13 +43,13 @@ data class GetProductByBarcode200ResponseAllOfAllOfSourcesInner (
     val id: kotlin.String? = null,
 
     @SerialName("images")
-    val images: kotlin.collections.List<kotlin.Any>? = null,
+    val images: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("import_t")
     val importT: kotlin.Int? = null,
 
     @SerialName("manufacturer")
-    val manufacturer: Any? = null,
+    val manufacturer: ByteArray? = null,
 
     @SerialName("name")
     val name: kotlin.String? = null,

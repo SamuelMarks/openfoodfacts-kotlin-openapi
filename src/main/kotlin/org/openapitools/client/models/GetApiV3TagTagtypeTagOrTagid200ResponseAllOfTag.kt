@@ -15,7 +15,7 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.Panels1
+import org.openapitools.client.models.Panels1
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -15,7 +15,7 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackagingPackagingsInner
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsPackagingPackagingsInner
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

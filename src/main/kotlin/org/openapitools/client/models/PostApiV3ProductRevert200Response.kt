@@ -15,8 +15,8 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.ResponseStatusResult
-import dev.upvote.api.models.WarningOrErrorMessage
+import org.openapitools.client.models.ResponseStatusResult
+import org.openapitools.client.models.WarningOrErrorMessage
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -15,8 +15,8 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.Element
-import dev.upvote.api.models.TitleElement
+import org.openapitools.client.models.Element
+import org.openapitools.client.models.TitleElement
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -18,6 +18,7 @@ package org.openapitools.client.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 /**
  * 
@@ -41,7 +42,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfIngredientsInnerIngredientsIn
 
     /* Sub ingredients composing this ingredients.  */
     @SerialName("ingredients")
-    val ingredients: kotlin.Any? = null,
+    val ingredients: JsonElement? = null,
 
     @SerialName("percent")
     val percent: kotlin.Int? = null,

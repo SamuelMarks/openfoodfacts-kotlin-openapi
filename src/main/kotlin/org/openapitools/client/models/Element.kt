@@ -15,11 +15,11 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.ImageElement
-import dev.upvote.api.models.PanelElement
-import dev.upvote.api.models.PanelGroupElement
-import dev.upvote.api.models.TableElement
-import dev.upvote.api.models.TextElement
+import org.openapitools.client.models.ImageElement
+import org.openapitools.client.models.PanelElement
+import org.openapitools.client.models.PanelGroupElement
+import org.openapitools.client.models.TableElement
+import org.openapitools.client.models.TextElement
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

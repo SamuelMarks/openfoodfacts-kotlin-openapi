@@ -15,24 +15,26 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfCategoriesProperties
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreData
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImages
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsAnalysis
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsInner
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNutrientLevels
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNutriments
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfNutriscoreData
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSelectedImages
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSourcesFields
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfSourcesInner
-import dev.upvote.api.models.PackagingComponentREAD
-import dev.upvote.api.models.Panels
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfAttributeGroupsInner
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfCategoriesProperties
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreData
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImages
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsAnalysis
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfIngredientsInner
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNutrientLevels
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNutriments
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfNutriscoreData
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSelectedImages
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSourcesFields
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfSourcesInner
+import org.openapitools.client.models.PackagingComponentREAD
+import org.openapitools.client.models.Panels
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
 
 /**
  * This is all the fields describing a product and how to display it on a page.  Refer to the different sub schema for more readable entries:  * [Product Base](#cmp--schemas-product-base): Base fields of a product * [Product Misc](#cmp--schemas-product-misc): Miscellaneous but important fields of a product * [Product Tags](#cmp--schemas-product-tags): Tags fields on a product * [Product Nutrition](#cmp--schemas-product-nutrition): Nutrition fields of a product * [Product Ingredients](#cmp--schemas-product-ingredients): Fields about ingredients of a product * [Product Images](#cmp--schemas-product-images): Information about Images of a product * [Product Eco-Score](#cmp--schemas-product-images): Fields related to Eco-Score for a product * [Product Metadata](#cmp--schemas-product-ecoscore): Metadata of a product (author, editors, etc.) * [Product Data Quality](#cmp--schemas-product-quality): fields related to data quality for a product * [Product Knowledge Panels](#cmp--schemas-product-knowledge-panels): Knowledge panels for a product * [Product Attribute Groups](#cmp--schemas-product-attribute-groups): Attribute groups for personal product matching 
@@ -420,7 +422,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val cities: kotlin.String? = null,
 
     @SerialName("cities_tags")
-    val citiesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val citiesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("correctors_tags")
     val correctorsTags: kotlin.collections.List<kotlin.String>? = null,
@@ -451,7 +453,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val embCodesOrig: kotlin.String? = null,
 
     @SerialName("emb_codes_tags")
-    val embCodesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val embCodesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("labels")
     val labels: kotlin.String? = null,
@@ -474,7 +476,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val manufacturingPlaces: kotlin.String? = null,
 
     @SerialName("manufacturing_places_tags")
-    val manufacturingPlacesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val manufacturingPlacesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("nova_groups_tags")
     val novaGroupsTags: kotlin.collections.List<kotlin.String>? = null,
@@ -531,7 +533,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val environmentImpactLevel: kotlin.String? = null,
 
     @SerialName("environment_impact_level_tags")
-    val environmentImpactLevelTags: kotlin.collections.List<kotlin.Any>? = null,
+    val environmentImpactLevelTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("additives_tags")
     val additivesTags: kotlin.collections.List<kotlin.String>? = null,
@@ -567,7 +569,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val ingredientsFromPalmOilN: kotlin.Int? = null,
 
     @SerialName("ingredients_from_palm_oil_tags")
-    val ingredientsFromPalmOilTags: kotlin.collections.List<kotlin.Any>? = null,
+    val ingredientsFromPalmOilTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("ingredients_hierarchy")
     val ingredientsHierarchy: kotlin.collections.List<kotlin.String>? = null,
@@ -611,7 +613,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val ingredientsThatMayBeFromPalmOilN: kotlin.Int? = null,
 
     @SerialName("ingredients_that_may_be_from_palm_oil_tags")
-    val ingredientsThatMayBeFromPalmOilTags: kotlin.collections.List<kotlin.Any>? = null,
+    val ingredientsThatMayBeFromPalmOilTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("ingredients_with_specified_percent_n")
     val ingredientsWithSpecifiedPercentN: kotlin.Int? = null,
@@ -633,26 +635,26 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val origins: kotlin.String? = null,
 
     @SerialName("origins_hierarchy")
-    val originsHierarchy: kotlin.collections.List<kotlin.Any>? = null,
+    val originsHierarchy: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("origins_lc")
     val originsLc: kotlin.String? = null,
 
     @SerialName("origins_tags")
-    val originsTags: kotlin.collections.List<kotlin.Any>? = null,
+    val originsTags: kotlin.collections.List<JsonElement>? = null,
 
     /* List of substances that might cause allergies that are present in trace amounts in the product (this does not include the ingredients, as they are not only present in trace amounts). It is taxonomized with the allergens taxonomy.  */
     @SerialName("traces")
     val traces: kotlin.String? = null,
 
     @SerialName("traces_hierarchy")
-    val tracesHierarchy: kotlin.collections.List<kotlin.Any>? = null,
+    val tracesHierarchy: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("traces_lc")
     val tracesLc: kotlin.String? = null,
 
     @SerialName("traces_tags")
-    val tracesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val tracesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("unknown_ingredients_n")
     val unknownIngredientsN: kotlin.Int? = null,
@@ -677,7 +679,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
 
     /* Nutri-Score for the product as a letter.  See https://world.openfoodfacts.org/nutriscore.  */
     @SerialName("nutriscore_grade")
-    val nutriscoreGrade: PatchApiV3ProductBarcode200ResponseAllOfProduct.NutriscoreGrade? = null,
+    val nutriscoreGrade: /*PatchApiV3ProductBarcode200ResponseAllOfProduct.NutriscoreGrade*/String? = null,
 
     /* Nutri-Score for the product as an integer (see also `nutriscore_grade`).  */
     @SerialName("nutriscore_score")
@@ -710,19 +712,19 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val nutritionScoreWarningNoFiber: kotlin.Int? = null,
 
     @SerialName("other_nutritional_substances_tags")
-    val otherNutritionalSubstancesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val otherNutritionalSubstancesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("unknown_nutrients_tags")
-    val unknownNutrientsTags: kotlin.collections.List<kotlin.Any>? = null,
+    val unknownNutrientsTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("vitamins_tags")
-    val vitaminsTags: kotlin.collections.List<kotlin.Any>? = null,
+    val vitaminsTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("data_quality_bugs_tags")
-    val dataQualityBugsTags: kotlin.collections.List<kotlin.Any>? = null,
+    val dataQualityBugsTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("data_quality_errors_tags")
-    val dataQualityErrorsTags: kotlin.collections.List<kotlin.Any>? = null,
+    val dataQualityErrorsTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("data_quality_info_tags")
     val dataQualityInfoTags: kotlin.collections.List<kotlin.String>? = null,
@@ -770,7 +772,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val additivesPrevOriginalTags: kotlin.collections.List<kotlin.String>? = null,
 
     @SerialName("added_countries_tags")
-    val addedCountriesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val addedCountriesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("allergens_from_ingredients")
     val allergensFromIngredients: kotlin.String? = null,
@@ -779,10 +781,10 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val allergensFromUser: kotlin.String? = null,
 
     @SerialName("amino_acids_prev_tags")
-    val aminoAcidsPrevTags: kotlin.collections.List<kotlin.Any>? = null,
+    val aminoAcidsPrevTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("amino_acids_tags")
-    val aminoAcidsTags: kotlin.collections.List<kotlin.Any>? = null,
+    val aminoAcidsTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("carbon_footprint_percent_of_known_ingredients")
     val carbonFootprintPercentOfKnownIngredients: kotlin.Int? = null,
@@ -818,22 +820,22 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val link: kotlin.String? = null,
 
     @SerialName("main_countries_tags")
-    val mainCountriesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val mainCountriesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("minerals_prev_tags")
-    val mineralsPrevTags: kotlin.collections.List<kotlin.Any>? = null,
+    val mineralsPrevTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("minerals_tags")
-    val mineralsTags: kotlin.collections.List<kotlin.Any>? = null,
+    val mineralsTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("owner_fields")
-    val ownerFields: Any? = null,
+    val ownerFields: ByteArray? = null,
 
     @SerialName("nova_groups_markers")
     val novaGroupsMarkers: GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers? = null,
 
     @SerialName("nucleotides_tags")
-    val nucleotidesTags: kotlin.collections.List<kotlin.Any>? = null,
+    val nucleotidesTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("origin")
     val origin: kotlin.String? = null,
@@ -880,11 +882,11 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val interfaceVersionModified: kotlin.String? = null,
 
     @SerialName("languages")
-    val languages: kotlin.Any? = null,
+    val languages: JsonElement? = null,
 
     /* Same as `languages` but by language code, instead of language tags  */
     @SerialName("languages_codes")
-    val languagesCodes: kotlin.Any? = null,
+    val languagesCodes: JsonElement? = null,
 
     @SerialName("languages_hierarchy")
     val languagesHierarchy: kotlin.collections.List<kotlin.String>? = null,

@@ -18,6 +18,7 @@ package org.openapitools.client.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 /**
  * URLs of thumbnails image of image of type `image_type`
@@ -32,15 +33,15 @@ data class GetProductByBarcode200ResponseAllOfAllOfSelectedImagesFront (
 
     /* Thumbnail urls of product image (front) adapted to display on product page  */
     @SerialName("display")
-    val display: kotlin.Any? = null,
+    val display: JsonElement? = null,
 
     /* Thumbnail urls of product image (front) adapted to display on product list page  */
     @SerialName("small")
-    val small: kotlin.Any? = null,
+    val small: JsonElement? = null,
 
     /* Thumbnail urls of product image (front) in smallest format  */
     @SerialName("thumb")
-    val thumb: kotlin.Any? = null
+    val thumb: JsonElement? = null
 
 ) {
 

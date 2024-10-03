@@ -15,7 +15,7 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.TableElementColumnsInner
+import org.openapitools.client.models.TableElementColumnsInner
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

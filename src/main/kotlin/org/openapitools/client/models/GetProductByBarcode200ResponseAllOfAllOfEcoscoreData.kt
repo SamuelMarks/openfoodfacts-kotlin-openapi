@@ -15,13 +15,14 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustments
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataMissing
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataPreviousData
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustments
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataMissing
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataPreviousData
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 /**
  * An object about a lot of details about data needed for Eco-Score computation  and complementary data of interest. 
@@ -51,7 +52,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreData (
     val grade: kotlin.String? = null,
 
     @SerialName("grades")
-    val grades: kotlin.Any? = null,
+    val grades: JsonElement? = null,
 
     @SerialName("missing")
     val missing: GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataMissing? = null,
@@ -66,7 +67,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreData (
     val score: kotlin.Int? = null,
 
     @SerialName("scores")
-    val scores: kotlin.Any? = null,
+    val scores: JsonElement? = null,
 
     @SerialName("status")
     val status: kotlin.String? = null

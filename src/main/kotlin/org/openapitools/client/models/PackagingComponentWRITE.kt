@@ -41,25 +41,25 @@ data class PackagingComponentWRITE (
 
     /* The shape property is canonicalized using the packaging_shapes taxonomy. */
     @SerialName("shape")
-    val shape: Any? = null,
+    val shape: ByteArray? = null,
 
     /* The material property is canonicalized using the packaging_materials taxonomy. */
     @SerialName("material")
-    val material: Any? = null,
+    val material: ByteArray? = null,
 
     /* The recycling property is canonicalized using the packaging_recycling taxonomy. */
     @SerialName("recycling")
-    val recycling: Any? = null,
+    val recycling: ByteArray? = null,
 
     /* Quantity (weight or volume) of food product contained in the packaging component. (e.g. 75cl for a wine bottle) */
     @SerialName("quantity_per_unit")
     val quantityPerUnit: kotlin.String? = null,
 
     @SerialName("weight_specified")
-    val weightSpecified: Any? = null,
+    val weightSpecified: ByteArray? = null,
 
     @SerialName("weight_measured")
-    val weightMeasured: Any? = null,
+    val weightMeasured: ByteArray? = null,
 
     /* A comma separated list of brands / product names for the packaging component (e.g. \"Tetra Pak\", Tetra Brik\" */
     @SerialName("brands")

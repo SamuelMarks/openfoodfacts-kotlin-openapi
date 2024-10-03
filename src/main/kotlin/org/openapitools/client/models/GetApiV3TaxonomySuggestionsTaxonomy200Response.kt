@@ -15,11 +15,12 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.ResponseStatusResult
-import dev.upvote.api.models.WarningOrErrorMessage
+import org.openapitools.client.models.ResponseStatusResult
+import org.openapitools.client.models.WarningOrErrorMessage
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 /**
  * 
@@ -56,7 +57,7 @@ data class GetApiV3TaxonomySuggestionsTaxonomy200Response (
 
     /* Dictionary of strings associating canonical names (as seen in suggestions field) with the synonym that best matches the query. An entry is present for all suggestions, even when the synonym is the same with the canonical name.  This value is present only if get_synonyms parameter is present.  */
     @SerialName("matched_synonyms")
-    val matchedSynonyms: kotlin.Any? = null
+    val matchedSynonyms: JsonElement? = null
 
 ) {
 

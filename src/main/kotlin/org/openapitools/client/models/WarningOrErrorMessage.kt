@@ -15,9 +15,9 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.WarningOrErrorMessageField
-import dev.upvote.api.models.WarningOrErrorMessageImpact
-import dev.upvote.api.models.WarningOrErrorMessageMessage
+import org.openapitools.client.models.WarningOrErrorMessageField
+import org.openapitools.client.models.WarningOrErrorMessageImpact
+import org.openapitools.client.models.WarningOrErrorMessageMessage
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

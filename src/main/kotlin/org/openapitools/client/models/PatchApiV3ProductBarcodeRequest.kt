@@ -15,7 +15,7 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.ProductUpdateAPIV3WRITE
+import org.openapitools.client.models.ProductUpdateAPIV3WRITE
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

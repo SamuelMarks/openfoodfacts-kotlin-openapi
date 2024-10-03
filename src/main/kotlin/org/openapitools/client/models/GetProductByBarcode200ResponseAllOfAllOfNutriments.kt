@@ -18,6 +18,7 @@ package org.openapitools.client.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 /**
  * All known nutrients for the product.  Note that each nutrients are declined with a variety of suffixes like `_100g`, `_serving`, see patternProperties below.  A specific `_unit` is the unit used to measure the nutrient.  Beware that some properties are to be interpreted based upon `nutrition_data_per` value.  Also for products that have a nutrition table for prepared product (eg. the nutrition facts for a bowl of milk with cocoa powder), a `_prepared` suffix is added (before other suffixes).  You can get all possible nutrients from the [nutrients taxonomy](https://static.openfoodfacts.org/data/taxonomies/nutrients.json)  **FIXME** add more nutrients with description. 
@@ -89,7 +90,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfNutriments (
     val novaGroup: kotlin.Int? = null,
 
     @SerialName("nutrition-score-fr")
-    val nutritionScoreFr: kotlin.Any? = null,
+    val nutritionScoreFr: JsonElement? = null,
 
     @SerialName("proteins")
     val proteins: Double? = null,

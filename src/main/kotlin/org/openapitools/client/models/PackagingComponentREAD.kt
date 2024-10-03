@@ -15,9 +15,9 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.PackagingComponentMaterial
-import dev.upvote.api.models.PackagingComponentRecyclingInstruction
-import dev.upvote.api.models.PackagingComponentShape
+import org.openapitools.client.models.PackagingComponentMaterial
+import org.openapitools.client.models.PackagingComponentRecyclingInstruction
+import org.openapitools.client.models.PackagingComponentShape
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

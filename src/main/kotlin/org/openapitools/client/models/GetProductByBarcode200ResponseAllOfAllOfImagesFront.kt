@@ -15,10 +15,11 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfImagesFrontSizes
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfImagesFrontSizes
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 /**
  * This represents an image (or part of it) selected for a specific role on this product. 
@@ -56,7 +57,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfImagesFront (
 
     /* Normalize colors. */
     @SerialName("normalize")
-    val normalize: kotlin.Any? = null,
+    val normalize: JsonElement? = null,
 
     @SerialName("rev")
     val rev: kotlin.String? = null,
@@ -66,7 +67,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfImagesFront (
 
     /* Photo on white background : Try to remove the background.  */
     @SerialName("white_magic")
-    val whiteMagic: kotlin.Any? = null,
+    val whiteMagic: JsonElement? = null,
 
     @SerialName("x1")
     val x1: kotlin.String? = null,

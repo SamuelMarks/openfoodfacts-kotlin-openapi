@@ -15,10 +15,12 @@
 
 package org.openapitools.client.models
 
-import dev.upvote.api.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredientsAggregatedOriginsInner
+import org.openapitools.client.models.GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOriginsOfIngredientsAggregatedOriginsInner
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonElement
 
 /**
  * 
@@ -49,13 +51,13 @@ data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOrigin
     val originsFromOriginsField: kotlin.collections.List<kotlin.String>? = null,
 
     @SerialName("transportation_scores")
-    val transportationScores: kotlin.Any? = null,
+    val transportationScores: JsonElement? = null,
 
     @SerialName("transportation_values")
-    val transportationValues: kotlin.Any? = null,
+    val transportationValues: JsonElement? = null,
 
     @SerialName("values")
-    val propertyValues: kotlin.Any? = null,
+    val propertyValues: JsonElement? = null,
 
     @SerialName("warning")
     val warning: kotlin.String? = null
