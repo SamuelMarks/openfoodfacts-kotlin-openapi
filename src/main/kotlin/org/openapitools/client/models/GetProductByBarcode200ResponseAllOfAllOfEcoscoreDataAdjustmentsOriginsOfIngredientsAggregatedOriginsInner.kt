@@ -33,7 +33,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAdjustmentsOrigin
     val origin: kotlin.String? = null,
 
     @SerialName("percent")
-    val percent: kotlin.Int? = null
+    val percent: Double? = null
 
 ) {
 

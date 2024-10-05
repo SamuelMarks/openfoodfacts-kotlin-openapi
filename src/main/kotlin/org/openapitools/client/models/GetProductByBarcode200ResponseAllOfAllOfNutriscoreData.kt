@@ -69,22 +69,22 @@ data class GetProductByBarcode200ResponseAllOfAllOfNutriscoreData (
     val energyValue: kotlin.Int? = null,
 
     @SerialName("fiber")
-    val fiber: kotlin.Int? = null,
+    val fiber: Double? = null,
 
     @SerialName("fiber_points")
     val fiberPoints: kotlin.Int? = null,
 
     @SerialName("fiber_value")
-    val fiberValue: kotlin.Int? = null,
+    val fiberValue: Double? = null,
 
     @SerialName("fruits_vegetables_nuts_colza_walnut_olive_oils")
-    val fruitsVegetablesNutsColzaWalnutOliveOils: kotlin.Int? = null,
+    val fruitsVegetablesNutsColzaWalnutOliveOils: Double? = null,
 
     @SerialName("fruits_vegetables_nuts_colza_walnut_olive_oils_points")
     val fruitsVegetablesNutsColzaWalnutOliveOilsPoints: kotlin.Int? = null,
 
     @SerialName("fruits_vegetables_nuts_colza_walnut_olive_oils_value")
-    val fruitsVegetablesNutsColzaWalnutOliveOilsValue: kotlin.Int? = null,
+    val fruitsVegetablesNutsColzaWalnutOliveOilsValue: Double? = null,
 
     @SerialName("grade")
     val grade: kotlin.String? = null,

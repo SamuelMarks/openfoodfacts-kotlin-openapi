@@ -37,6 +37,7 @@ import org.openapitools.client.models.ResponseStatusResult
 import org.openapitools.client.models.WarningOrErrorMessage
 import kotlinx.serialization.descriptors.StructureKind
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
 
 /**
  * 
@@ -727,7 +728,7 @@ data class GetProductByBarcode200Response (
     val nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredients: kotlin.Int? = null,
 
     @SerialName("nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients_value")
-    val nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredientsValue: kotlin.Int? = null,
+    val nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredientsValue: Double? = null,
 
     @SerialName("nutrition_score_warning_no_fiber")
     val nutritionScoreWarningNoFiber: kotlin.Int? = null,
@@ -850,7 +851,7 @@ data class GetProductByBarcode200Response (
     val mineralsTags: kotlin.collections.List<JsonElement>? = null,
 
     @SerialName("owner_fields")
-    val ownerFields: ByteArray? = null,
+    val ownerFields: JsonObject? = null,
 
     @SerialName("nova_groups_markers")
     val novaGroupsMarkers: GetProductByBarcode200ResponseAllOfAllOfNovaGroupsMarkers? = null,

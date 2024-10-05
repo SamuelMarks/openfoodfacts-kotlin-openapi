@@ -45,7 +45,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfIngredientsInner (
     val ingredients: kotlin.collections.List<GetProductByBarcode200ResponseAllOfAllOfIngredientsInnerIngredientsInner>? = null,
 
     @SerialName("percent")
-    val percent: kotlin.Int? = null,
+    val percent: Double? = null,
 
     @SerialName("percent_estimate")
     val percentEstimate: Double? = null,
@@ -54,7 +54,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfIngredientsInner (
     val percentMax: Double? = null,
 
     @SerialName("percent_min")
-    val percentMin: kotlin.Int? = null,
+    val percentMin: kotlin.Float? = null,
 
     @SerialName("text")
     val text: kotlin.String? = null,
