@@ -21,8 +21,8 @@ Return knowledge panels for a tag.  Currently the knowledge panels returned are:
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import io.offscale.openfoodfacts.client.infrastructure.*
+//import io.offscale.openfoodfacts.client.models.*
 
 val apiInstance = DefaultApi()
 val tagtype : kotlin.String = categories // kotlin.String | Type of the tag
@@ -73,8 +73,8 @@ Open Food Facts uses multilingual [taxonomies](https://wiki.openfoodfacts.org/Gl
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import io.offscale.openfoodfacts.client.infrastructure.*
+//import io.offscale.openfoodfacts.client.models.*
 
 val apiInstance = DefaultApi()
 val tagtype : kotlin.String = additives // kotlin.String | 
@@ -135,8 +135,8 @@ This API allows to create or update a product (if the product already exists, it
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import io.offscale.openfoodfacts.client.infrastructure.*
+//import io.offscale.openfoodfacts.client.models.*
 
 val apiInstance = DefaultApi()
 val barcode : kotlin.String = barcode_example // kotlin.String | Barcode of the product to create or update, or \"test\" to analyze the product data sent without creating or updating a product
@@ -183,8 +183,8 @@ For moderators only, revert a product to a previous revision.
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import io.offscale.openfoodfacts.client.infrastructure.*
+//import io.offscale.openfoodfacts.client.models.*
 
 val apiInstance = DefaultApi()
 val postApiV3ProductRevertRequest : PostApiV3ProductRevertRequest =  // PostApiV3ProductRevertRequest | The code and rev fields are mandatory. 

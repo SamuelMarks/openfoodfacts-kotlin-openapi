@@ -18,8 +18,8 @@ Retrieve information for a product with a specific barcode.  The fields paramete
 ### Example
 ```kotlin
 // Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
+//import io.offscale.openfoodfacts.client.infrastructure.*
+//import io.offscale.openfoodfacts.client.models.*
 
 val apiInstance = ReadRequestsApi()
 val barcode : kotlin.String = 3017620422003 // kotlin.String | The barcode of the product to be fetched 
