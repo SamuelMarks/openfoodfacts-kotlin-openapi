@@ -15,6 +15,7 @@
 
 package io.offscale.openfoodfacts.client.apis
 
+import io.ktor.client.*
 import java.io.IOException
 
 import io.offscale.openfoodfacts.client.models.GetProductByBarcode200Response
@@ -33,7 +34,7 @@ import io.offscale.openfoodfacts.client.infrastructure.ResponseType
 import io.offscale.openfoodfacts.client.infrastructure.Success
 import io.offscale.openfoodfacts.client.infrastructure.toMultiValue
 
-class ReadRequestsApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory = ApiClient.defaultClient) : ApiClient(basePath, client) {
+class ReadRequestsApi(basePath: kotlin.String = defaultBasePath, client: HttpClient = ApiClient.defaultClient) : ApiClient(basePath, client) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -142,15 +143,11 @@ class ReadRequestsApi(basePath: kotlin.String = defaultBasePath, client: Call.Fa
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/api/v3/product/{barcode}".replace("{"+"barcode"+"}", encodeURIComponent(barcode.toString())),
+            path = "/api/v3/product/{barcode}".replace("{"+"barcode"+"}" , barcode), // TODO: encodeURIComponent(barcode.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
             body = localVariableBody
         )
     }
-
-
-    private fun encodeURIComponent(uriComponent: kotlin.String): kotlin.String =
-        HttpUrl.Builder().scheme("http").host("localhost").addPathSegment(uriComponent).build().encodedPathSegments[0]
 }

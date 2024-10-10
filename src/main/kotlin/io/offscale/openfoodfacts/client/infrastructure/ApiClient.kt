@@ -12,9 +12,7 @@ import java.time.OffsetTime
 import java.util.Locale
 import java.util.regex.Pattern
 
-val EMPTY_REQUEST: RequestBody = ByteArray(0).toRequestBody()
-
-open class ApiClient(val baseUrl: String, val client: Call.Factory = defaultClient) {
+open class ApiClient(val baseUrl: String, val client: HttpClient = defaultClient) {
     companion object {
         protected const val ContentType = "Content-Type"
         protected const val Accept = "Accept"

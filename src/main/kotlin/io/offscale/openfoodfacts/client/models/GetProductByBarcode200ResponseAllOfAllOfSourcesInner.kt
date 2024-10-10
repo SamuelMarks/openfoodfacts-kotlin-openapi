@@ -49,7 +49,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfSourcesInner (
     val importT: kotlin.Int? = null,
 
     @SerialName("manufacturer")
-    val manufacturer: ByteArray? = null,
+    val manufacturer: JsonElement? = null,
 
     @SerialName("name")
     val name: kotlin.String? = null,

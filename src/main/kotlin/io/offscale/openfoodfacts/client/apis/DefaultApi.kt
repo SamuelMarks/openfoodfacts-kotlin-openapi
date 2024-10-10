@@ -17,6 +17,7 @@ package io.offscale.openfoodfacts.client.apis
 
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
+import io.ktor.http.encodeURLQueryComponent
 import java.io.IOException
 
 import io.offscale.openfoodfacts.client.models.GetApiV3TagTagtypeTagOrTagid200Response
@@ -128,7 +129,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: HttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/api/v3/tag/{tagtype}/{tag_or_tagid}".replace("{"+"tagtype"+"}", encodeURIComponent(tagtype.toString())).replace("{"+"tag_or_tagid"+"}", encodeURIComponent(tagOrTagid.toString())),
+            path = "/api/v3/tag/{tagtype}/{tag_or_tagid}",// TODO: .replace("{"+"tagtype"+"}", tagtype.encodeURLQueryComponent(.toString())).replace("{"+"tag_or_tagid"+"}", encodeURIComponent(tagOrTagid.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -327,7 +328,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: HttpClient =
 
         return RequestConfig(
             method = RequestMethod.PATCH,
-            path = "/api/v3/product/{barcode}".replace("{"+"barcode"+"}", encodeURIComponent(barcode.toString())),
+            path = "/api/v3/product/{barcode}", // TODO: .replace("{"+"barcode"+"}",  encodeURIComponent(barcode.toString())),
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
@@ -406,8 +407,4 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: HttpClient =
             body = localVariableBody
         )
     }
-
-
-    private fun encodeURIComponent(uriComponent: kotlin.String): kotlin.String =
-        HttpUrl.Builder().scheme("http").host("localhost").addPathSegment(uriComponent).build().encodedPathSegments[0]
 }
