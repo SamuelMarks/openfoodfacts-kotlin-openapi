@@ -371,7 +371,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
 
     /* An imprecise measurement of popularity based on Scan statistics. A higher value means higher popularity.  */
     @SerialName("popularity_key")
-    val popularityKey: kotlin.Int? = null,
+    val popularityKey: kotlin.ULong? = null,
 
     /* Indicators for the popularity of a product, like the amount of scans in a specific year.  */
     @SerialName("popularity_tags")
@@ -672,7 +672,7 @@ data class PatchApiV3ProductBarcode200ResponseAllOfProduct (
     val nutritionDataPreparedPer: PatchApiV3ProductBarcode200ResponseAllOfProduct.NutritionDataPreparedPer? = null,
 
     @SerialName("nutriments")
-    val nutriments: _root_ide_package_.io.offscale.openfoodfacts.client.models.GetProductByBarcode200ResponseAllOfAllOfNutriments? = null,
+    val nutriments: GetProductByBarcode200ResponseAllOfAllOfNutriments? = null,
 
     @SerialName("nutriscore_data")
     val nutriscoreData: GetProductByBarcode200ResponseAllOfAllOfNutriscoreData? = null,

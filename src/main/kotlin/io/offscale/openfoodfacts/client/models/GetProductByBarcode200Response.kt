@@ -264,7 +264,7 @@ data class GetProductByBarcode200Response (
     val statusId: GetProductByBarcode200Response.StatusId? = null,
 
     @SerialName("result")
-    val result: io.offscale.openfoodfacts.client.models.ResponseStatusResult? = null,
+    val result: ResponseStatusResult? = null,
 
     /* List of warnings. Warnings are used to alert about something that may be wrong, but is not necessarily wrong (e.g. a nutrient value that is unexpectedly high). */
     @SerialName("warnings")
@@ -393,7 +393,7 @@ data class GetProductByBarcode200Response (
 
     /* An imprecise measurement of popularity based on Scan statistics. A higher value means higher popularity.  */
     @SerialName("popularity_key")
-    val popularityKey: kotlin.Int? = null,
+    val popularityKey: kotlin.ULong? = null,
 
     /* Indicators for the popularity of a product, like the amount of scans in a specific year.  */
     @SerialName("popularity_tags")
@@ -694,7 +694,7 @@ data class GetProductByBarcode200Response (
     val nutritionDataPreparedPer: GetProductByBarcode200Response.NutritionDataPreparedPer? = null,
 
     @SerialName("nutriments")
-    val nutriments: io.offscale.openfoodfacts.client.models.GetProductByBarcode200ResponseAllOfAllOfNutriments? = null,
+    val nutriments: GetProductByBarcode200ResponseAllOfAllOfNutriments? = null,
 
     @SerialName("nutriscore_data")
     val nutriscoreData: GetProductByBarcode200ResponseAllOfAllOfNutriscoreData? = null,

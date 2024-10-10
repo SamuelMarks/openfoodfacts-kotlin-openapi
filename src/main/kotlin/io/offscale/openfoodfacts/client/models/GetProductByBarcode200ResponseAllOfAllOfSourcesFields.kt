@@ -30,7 +30,7 @@ import kotlinx.serialization.Serializable
 data class GetProductByBarcode200ResponseAllOfAllOfSourcesFields (
 
     @SerialName("org-gs1")
-    val orgGs1: io.offscale.openfoodfacts.client.models.GetProductByBarcode200ResponseAllOfAllOfSourcesFieldsOrgGs1? = null
+    val orgGs1: GetProductByBarcode200ResponseAllOfAllOfSourcesFieldsOrgGs1? = null
 
 ) {
 

@@ -55,7 +55,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse (
     val co2Agriculture: Double? = null,
 
     @SerialName("co2_consumption")
-    val co2Consumption: kotlin.Int? = null,
+    val co2Consumption: Double? = null,
 
     @SerialName("co2_distribution")
     val co2Distribution: Double? = null,
@@ -82,7 +82,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfEcoscoreDataAgribalyse (
     val efAgriculture: Double? = null,
 
     @SerialName("ef_consumption")
-    val efConsumption: kotlin.Int? = null,
+    val efConsumption: Double? = null,
 
     @SerialName("ef_distribution")
     val efDistribution: Double? = null,

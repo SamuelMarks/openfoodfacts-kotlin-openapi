@@ -65,7 +65,7 @@ data class GetProductByBarcode200ResponseAllOfAllOfNutriments (
 
     /* Equal to energy-kj_unit if we have it or to energy-kcal_unit otherwise  */
     @SerialName("energy_unit")
-    val energyUnit: io.offscale.openfoodfacts.client.models.GetProductByBarcode200ResponseAllOfAllOfNutriments.EnergyUnit? = null,
+    val energyUnit: GetProductByBarcode200ResponseAllOfAllOfNutriments.EnergyUnit? = null,
 
     /* energy in kcal, if it is specified  (per 100g or per serving) in a standard unit (g or ml)  */
     @SerialName("energy-kcal")

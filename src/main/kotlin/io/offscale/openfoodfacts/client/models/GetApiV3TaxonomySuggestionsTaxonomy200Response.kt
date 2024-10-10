@@ -41,7 +41,7 @@ data class GetApiV3TaxonomySuggestionsTaxonomy200Response (
     val statusId: GetApiV3TaxonomySuggestionsTaxonomy200Response.StatusId? = null,
 
     @SerialName("result")
-    val result: io.offscale.openfoodfacts.client.models.ResponseStatusResult? = null,
+    val result: ResponseStatusResult? = null,
 
     /* List of warnings. Warnings are used to alert about something that may be wrong, but is not necessarily wrong (e.g. a nutrient value that is unexpectedly high). */
     @SerialName("warnings")
